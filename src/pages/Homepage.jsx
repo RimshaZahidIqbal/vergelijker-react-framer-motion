@@ -7,6 +7,7 @@ import InsuranceSection from '../components/sections/InsuranceSection'
 import Slider from '../components/ui/Slider'
 import sliderData from '../utils/SliderData'
 import BrandSection from '../components/sections/BrandSection'
+import ComparisonSection from '../components/sections/ComparisonSection '
 const Homepage = () => {
     return (
         <div className='p-1 md:p-6 lg:p-12 xl:p-24 2xl:p-32 overflow-x-hidden'>
@@ -21,6 +22,7 @@ const Homepage = () => {
             <InfoSection />
 
             <Slider items={sliderData} />
+            <ComparisonSection />
             <BrandSection />
 
         </div>
