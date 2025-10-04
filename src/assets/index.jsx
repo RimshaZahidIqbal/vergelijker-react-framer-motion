@@ -1,6 +1,6 @@
 // Top-level images
 import GirlImage from "./Girl-Image.png";
-import LinePattern from "./Line pattern.svg";
+import LinePattern from "./Line pattern.png";
 import Logo from "./logo.png";
 import ReactLogo from "./react.svg";
 import CarInsurance1 from "./CarInsurance1.png";
