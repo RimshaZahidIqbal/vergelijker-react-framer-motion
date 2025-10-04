@@ -24,7 +24,22 @@
     font-style: normal;
 }
 
-/* Default font */
 body {
     font-family: 'Geist', sans-serif;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+
+.marquee-content {
+    animation: scroll-left 25s linear infinite;
+    width: max-content;
 }

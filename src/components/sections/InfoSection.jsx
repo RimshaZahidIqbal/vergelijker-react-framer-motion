@@ -9,16 +9,16 @@ const InfoSection = () => {
                     className="font-[Neighbor] font-semibold text-[62px] leading-[103%] tracking-[-0.02em] max-w-2xl text-gray-900"
                 >
                     {/* Line 1 */}
-                    <div className="inline-flex gap-3">
+                    <span className="inline-flex gap-3">
                         <AnimatedText text="Smart choices" />
                         <AnimatedText className="text-[#FE65D9]" text="start with" />
-                    </div>
+                    </span>
 
                     {/* Line 2 */}
-                    <div className="inline-flex gap-3 justify-center w-full">
+                    <span className="inline-flex gap-3 justify-center w-full">
                         <AnimatedText className="text-[#FE65D9]" text="good" />
                         <AnimatedText text="information" />
-                    </div>
+                    </span>
                 </h2>
 
                 <p
@@ -32,6 +32,7 @@ const InfoSection = () => {
                     We give you clear, unbiased insights so you can make <br /> smarter choices with confidence.
                 </p>
             </div>
+
         </div>
     )
 }

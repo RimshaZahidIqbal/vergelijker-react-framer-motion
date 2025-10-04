@@ -7,6 +7,8 @@ import CarInsurance1 from "./CarInsurance1.png";
 import CarInsurance2 from "./CarInsurance2.png";
 
 // Icons
+import Logo1 from "./icons/logo1.svg";
+import Logo2 from "./icons/logo2.svg";
 import Group1 from "./icons/Group-1.svg";
 import Group2 from "./icons/Group-2.svg";
 import Group3 from "./icons/Group-3.svg";
@@ -21,6 +23,8 @@ export {
     Group2,
     Group3,
     Group4,
+    Logo1,
+    Logo2,
     CarInsurance1,
     CarInsurance2
 };
