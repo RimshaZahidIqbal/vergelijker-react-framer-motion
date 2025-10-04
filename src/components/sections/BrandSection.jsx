@@ -34,7 +34,7 @@ const BrandSection = () => {
                         <div
 
                             key={item.key}
-                            className="flex-shrink-0 flex items-center justify-center w-28 h-7 text-gray-700 hover:text-blue-500 transition-colors"
+                            className="flex-shrink-0 flex items-center justify-center w-28 h-7 text-gray-700 "
                         >
                             <img
                                 src={item.icon}
