@@ -14,6 +14,23 @@ import Group2 from "./icons/Group-2.svg";
 import Group3 from "./icons/Group-3.svg";
 import Group4 from "./icons/Group-4.svg";
 
+//ComparisonSection Images
+import img1 from "./ComparisonSection/image1.png";
+import img2 from "./ComparisonSection/image2.png";
+import img3 from "./ComparisonSection/image3.png";
+import img4 from "./ComparisonSection/image4.png";
+import img5 from "./ComparisonSection/image5.png";
+import img6 from "./ComparisonSection/image6.png";
+import img7 from "./ComparisonSection/image7.png";
+import img8 from "./ComparisonSection/image8.png";
+import img9 from "./ComparisonSection/image9.png";
+
+//HeroSection Images
+import face from "./heroSection/faceImage.svg";
+import carCard from "./heroSection/carCard.png";
+import homeCard from "./heroSection/homeCard.png";
+import heroBg from "./heroSection/heroBg.png";
+
 export {
     GirlImage,
     LinePattern,
@@ -27,5 +44,18 @@ export {
     Logo2,
     CarInsurance1,
     CarInsurance2,
-    VectorImage
+    VectorImage,
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    face,
+    carCard,
+    homeCard,
+    heroBg,
 };

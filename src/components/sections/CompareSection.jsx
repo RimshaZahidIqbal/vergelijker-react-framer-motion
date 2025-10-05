@@ -18,7 +18,7 @@ const CompareSection = () => {
         {stats.slice(0, 2).map((stat, index) => (
           <motion.div
             key={stat.id}
-            className={`w-[220px] h-[220px] bg-white rounded-2xl p-6 text-center cursor-pointer opacity-100  ${stat.tilt} `}
+            className={`w-[220px] h-[220px] bg-[#F8F8F8] rounded-2xl p-6 text-[#1D5E48] text-center cursor-pointer opacity-100  ${stat.tilt} `}
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
@@ -58,22 +58,11 @@ const CompareSection = () => {
 
 
       {/* Text */}
-      {/* <p className="font-[Neighbor] text-center max-w-2xl text-lg mb-6 font-medium">
-        We help you find the perfect match in seconds. 100% independent, crystal clear, and designed to make smarter choices effortlessly.
-      </p> */}
       <p className="font-[Neighbor] font-medium text-[54px] leading-[100%] tracking-[-0.04em] text-center max-w-6xl mb-6">
         We help you find the perfect match in seconds. 100% independent, crystal clear, and designed to make smarter choices effortlessly.
       </p>
 
       {/* Button */}
-      {/* <motion.a
-        href="#"
-        className="px-6 py-3 rounded-lg bg-pink-600 text-white font-semibold shadow-md mb-12"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Compare Now - It's Free <HiArrowSmRight className="inline-block ml-2" />
-      </motion.a> */}
       <AnimatedButton />
 
       {/* Bottom 2 Cards (more gap) */}
@@ -81,7 +70,7 @@ const CompareSection = () => {
         {stats.slice(2, 4).map((stat, index) => (
           <motion.div
             key={stat.id}
-            className={`w-[220px] h-[220px] bg-white rounded-2xl p-6 text-center cursor-pointer ${stat.tilt}`}
+            className={`w-[220px] h-[220px]  bg-[#F8F8F8] rounded-2xl p-6 text-[#1D5E48] text-center cursor-pointer ${stat.tilt}`}
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
