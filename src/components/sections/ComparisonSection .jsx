@@ -1,180 +1,265 @@
-// import React from "react";
-// import { motion } from "framer-motion";
-// import { img1, img2, img3, img4, img5, img6, img7, img8, img9 } from "../../assets";
-
-// const ComparisonSection = () => {
-//     return (
-//         <div className="w-full bg-[#0f3d2e] text-white px-12 py-20 space-y-32">
-
-//             {/* First Section */}
-//             <div className="flex justify-between items-start w-[1300px] mx-auto">
-//                 <motion.h1
-//                     initial={{ opacity: 0, y: 30 }}
-//                     whileInView={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.8 }}
-//                     className="w-[674px] font-[Neighbor] font-semibold text-[66px] leading-[103%] tracking-[-0.02em]"
-//                 >
-//                     The comparison <span className="text-pink-400">site</span> that puts you first
-//                 </motion.h1>
-
-//                 <motion.p
-//                     initial={{ opacity: 0 }}
-//                     whileInView={{ opacity: 1 }}
-//                     transition={{ delay: 0.2, duration: 0.8 }}
-//                     className="w-[448px] font-[Geist] text-[18px] leading-[131%] tracking-[-0.02em]"
-//                 >
-//                     We make comparing simple, transparent, and stress-free — no hidden agendas,
-//                     just clear choices designed to help you save time and money.
-//                 </motion.p>
-//             </div>
-
-//             {/* Second Section */}
-//             <div className="flex justify-between items-center w-[1408px] mx-auto px-[54px]">
-//                 <div>
-//                     <h2 className="font-[Neighbor] text-[42px]">Truly Independent</h2>
-//                     <div className="flex gap-3 mt-4">
-//                         {[
-//                             "No commission bias",
-//                             "No paid rankings",
-//                             "Objective recommendations",
-//                             "Your interests first",
-//                         ].map((txt, i) => (
-//                             <span
-//                                 key={i}
-//                                 className="px-5 py-2 border border-white/50 rounded-full text-[16px] font-[Geist]"
-//                             >
-//                                 {txt}
-//                             </span>
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 <div className="flex gap-4">
-//                     <img src={img1} className="w-[112px] h-[128px] rounded-[16px]" />
-//                     <img src={img2} className="w-[181px] h-[128px] rounded-[16px]" />
-//                     <img src={img3} className="w-[196px] h-[128px] rounded-[16px]" />
-//                 </div>
-//             </div>
-
-//             {/* Third Section */}
-//             <div className="flex items-center gap-[60px] w-[1408px] mx-auto">
-//                 <img src={img4} className="w-[112px] h-[128px] rounded-[16px]" />
-//                 <div className="w-[457px] space-y-4">
-//                     <h2 className="font-[Neighbor] text-[42px]">Lightning Fast</h2>
-//                     <p className="font-[Geist] text-[18px] leading-[131%]">
-//                         Results in under 60 seconds, Real-time pricing updates.
-//                         Instant online switching. No waiting for quotes
-//                     </p>
-//                 </div>
-//                 <h2 className="font-[Neighbor] text-[42px]">Best Quality</h2>
-//             </div>
-
-//             {/* Fourth Section */}
-//             <div className="flex items-center gap-[60px] w-[1408px] mx-auto">
-//                 <img src={img5} className="w-[174px] h-[128px] rounded-[16px]" />
-//                 <img src={img6} className="w-[112px] h-[128px] rounded-[16px]" />
-//                 <h2 className="font-[Neighbor] text-[42px] leading-[105%]">
-//                     Free. Fair. Fast.
-//                 </h2>
-//                 <img src={img7} className="w-[112px] h-[128px] rounded-[16px]" />
-
-//                 <div className="w-[560px] space-y-4">
-//                     <h2 className="font-[Neighbor] text-[42px]">Completely Free</h2>
-//                     <p className="font-[Geist] text-[18px] leading-[131%]">
-//                         Vergelijker.nl is completely free to use — no hidden costs, no tricks.
-//                         Just honest comparisons that help you make better choices.
-//                     </p>
-//                 </div>
-//             </div>
-
-//             {/* Fifth Section */}
-//             <div className="flex justify-between items-center w-[1408px] mx-auto px-[54px]">
-//                 <div className="space-y-6">
-//                     <h2 className="font-[Neighbor] text-[42px]">Secure & Private</h2>
-//                     <div className="flex gap-4">
-//                         {[
-//                             "Bank-level encryption",
-//                             "GDPR compliant",
-//                             "Data never sold",
-//                         ].map((txt, i) => (
-//                             <span
-//                                 key={i}
-//                                 className="px-5 py-2 border border-white/50 rounded-full text-[16px] font-[Geist]"
-//                             >
-//                                 {txt}
-//                             </span>
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 <div className="flex gap-4 items-center">
-//                     <img src={img8} className="w-[112px] h-[128px] rounded-[16px]" />
-//                     <img src={img9} className="w-[181px] h-[128px] rounded-[16px]" />
-//                     <h2 className="font-[Neighbor] text-[42px] w-[237px]">
-//                         Transparent Privacy Policy
-//                     </h2>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default ComparisonSection;
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-    img1, img2, img3, img4, img5, img6, img7, img8, img9,
-    bgLine // <-- import your background line image here (e.g., from assets)
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    LinePattern,
 } from "../../assets";
+import AnimatedText from "../ui/AnimatedText";
 
 const ComparisonSection = () => {
+    const allImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+
+    const [topImages, setTopImages] = useState([img1, img2, img3]);
+    const [thirdImage, setThirdImage] = useState(img4);
+    const [fourthImages, setFourthImages] = useState([img5, img6, img7]);
+    const [fifthImages, setFifthImages] = useState([img8, img9]);
+
+    const shuffleArray = (arr, count = arr.length) => {
+        const shuffled = [...arr].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTopImages(shuffleArray(allImages, 3));
+            setThirdImage(shuffleArray(allImages, 1)[0]);
+            setFourthImages(shuffleArray(allImages, 3));
+            setFifthImages(shuffleArray(allImages, 2));
+        }, 5000); // slower switch (5 seconds)
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <motion.div
             style={{
-                width: "1407px",
-                height: "1312px",
-                top: "1305.14px",
-                left: "-54px",
-                opacity: 1,
-                backgroundColor: "#1D5E48",
-                backgroundImage: `url(${bgLine})`,
+                backgroundImage: `url(${LinePattern})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
-            className="relative overflow-hidden text-white rounded-[20px]"
+            className="relative overflow-hidden text-white rounded-3xl bg-[#1D5E48] w-full py-16 px-6 md:px-12"
         >
-            <div className="w-full px-12 py-20 space-y-32">
+            <div className="max-w-9xl mx-auto space-y-26">
 
-                {/* --- paste your existing inner content exactly as-is --- */}
-                {/* First Section */}
-                <div className="flex justify-between items-start w-[1300px] mx-auto">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="w-[674px] font-[Neighbor] font-semibold text-[66px] leading-[103%] tracking-[-0.02em]"
-                    >
-                        The comparison <span className="text-pink-400">site</span> that puts you first
-                    </motion.h1>
+                {/* FIRST SECTION */}
+                <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+                    <div className="flex flex-wrap max-w-5xl leading-tight">
+                        <AnimatedText
+                            text="The comparison "
+                            className="block font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                        />
+                        <AnimatedText
+                            text="site"
+                            className="block font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-pink-400"
+                        />
+                        <AnimatedText
+                            text="that puts "
+                            className="block font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-pink-400"
+                        />
+                        <AnimatedText
+                            text="you first"
+                            className="block font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                        />
+                    </div>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        className="w-[448px] font-[Geist] text-[18px] leading-[131%] tracking-[-0.02em]"
-                    >
-                        We make comparing simple, transparent, and stress-free — no hidden agendas,
-                        just clear choices designed to help you save time and money.
-                    </motion.p>
+                    <p className="md:w-2/3 text-base sm:text-lg leading-relaxed">
+                        We make comparing simple, and stress-free - no hidden agendas, just
+                        clear designed to help you save time and money.
+                    </p>
                 </div>
 
-                {/* (keep your remaining sections unchanged) */}
+                {/* SECOND SECTION */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div>
+                        <AnimatedText
+                            text="Truly Independent"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl"
+                        />
+                        <div className="grid grid-cols-2 gap-3 mt-4 text-center justify-items-center">
+                            {[
+                                "No commission bias",
+                                "No paid rankings",
+                                "Objective recommendations",
+                                "Your interests first",
+                            ].map((txt, i) => (
+                                <span
+                                    key={i}
+                                    className="px-3 py-1 border border-white/50 rounded-full text-sm sm:text-base whitespace-nowrap"
+                                >
+                                    {txt}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
 
+                    <div className="flex gap-4 flex-wrap justify-center">
+                        {topImages.map((src, i) => (
+                            <motion.div
+                                key={i}
+                                className="w-24 h-28 md:w-36 md:h-28 rounded-xl overflow-hidden bg-white/10"
+                            >
+                                <motion.img
+                                    src={src}
+                                    className="w-full h-full object-cover"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1.5 }}
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                <hr />
+
+                {/* THIRD SECTION */}
+                <div className="flex flex-col md:flex-row items-center gap-10 w-full">
+                    <div className="w-24 h-28 rounded-xl overflow-hidden bg-white/10">
+                        <motion.img
+                            key={thirdImage}
+                            src={thirdImage}
+                            className="w-full h-full object-cover"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1.5 }}
+                        />
+                    </div>
+
+                    <div className="md:w-2/3 space-y-4">
+                        <AnimatedText
+                            text="Lightning Fast"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl"
+                        />
+                        <p className="text-base sm:text-lg leading-relaxed">
+                            Results in under 60 seconds, Real-time pricing updates. Instant
+                            online switching. No waiting for quotes.
+                        </p>
+                    </div>
+
+                    <div className="ml-auto">
+                        <AnimatedText
+                            text="Best Quality"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl whitespace-nowrap"
+                        />
+                    </div>
+                </div>
+
+                <hr />
+
+                {/* FOURTH SECTION */}
+                <div className="flex flex-col md:flex-row items-center gap-3 w-full">
+                    {fourthImages.slice(0, 2).map((src, i) => (
+                        <div
+                            key={i}
+                            className="w-24 h-28 md:w-36 md:h-28 rounded-xl overflow-hidden bg-white/10"
+                        >
+                            <motion.img
+                                src={src}
+                                className="w-full h-full object-cover"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 1.5 }}
+                            />
+                        </div>
+                    ))}
+
+                    <div className="flex flex-col w-20 text-center md:text-left">
+                        <AnimatedText
+                            text="Free."
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl leading-snug"
+                        />
+                        <AnimatedText
+                            text="Fair."
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl leading-snug"
+                        />
+                        <AnimatedText
+                            text="Fast."
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl leading-snug"
+                        />
+                    </div>
+
+                    <div className="w-24 h-28 md:w-36 md:h-28 rounded-xl overflow-hidden bg-white/10">
+                        <motion.img
+                            key={fourthImages[2]}
+                            src={fourthImages[2]}
+                            className="w-full h-full object-cover"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1.5 }}
+                        />
+                    </div>
+
+                    <div className="md:w-2/3 space-y-4">
+                        <AnimatedText
+                            text="Completely Free"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl"
+                        />
+                        <p className="text-base sm:text-lg leading-relaxed">
+                            Vergelijker is completely free to use - no hidden costs, no tricks.
+                            Just honest comparisons that help you make better choices.
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
+                {/* FIFTH SECTION */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-10 w-full">
+                    <div className="space-y-6 text-center md:text-left">
+                        <AnimatedText
+                            text="Secure & Private"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl"
+                        />
+                        <div className="flex flex-wrap justify-center md:justify-start gap-2">
+                            {[
+                                "Bank-level encryption",
+                                "GDPR compliant",
+                                "Data never sold",
+                            ].map((txt, i) => (
+                                <span
+                                    key={i}
+                                    className="px-3 py-1 border border-white/50 rounded-full text-xs sm:text-sm md:text-base whitespace-nowrap"
+                                >
+                                    {txt}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                        {fifthImages.map((src, i) => (
+                            <div
+                                key={i}
+                                className="w-24 h-28 md:w-38 md:h-30 rounded-xl overflow-hidden bg-white/10"
+                            >
+                                <motion.img
+                                    src={src}
+                                    className="w-full h-full object-cover"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1.5 }}
+                                />
+                            </div>
+                        ))}
+
+                        <AnimatedText
+                            text="Transparent Privacy Policy"
+                            className="font-[Neighbor] text-xl sm:text-2xl md:text-3xl text-center leading-snug"
+                        />
+                    </div>
+                </div>
             </div>
         </motion.div>
     );
 };
 
 export default ComparisonSection;
+
