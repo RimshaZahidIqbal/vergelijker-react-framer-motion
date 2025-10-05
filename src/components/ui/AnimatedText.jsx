@@ -3,11 +3,9 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const AnimatedText = ({ text, className = "" }) => {
-    const letters = text.split(""); // split into characters
+    const words = text.split(" ");
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, margin: "-50px" });
-    // once:false = re-trigger on scroll
-    // margin gives earlier/later trigger threshold
 
     const letterVariant = {
         initial: { y: 20, opacity: 0 },
@@ -23,18 +21,22 @@ const AnimatedText = ({ text, className = "" }) => {
     };
 
     return (
-        <div ref={ref} className="flex  flex-wrap">
-            {letters.map((letter, i) => (
-                <motion.span
-                    key={i}
-                    variants={letterVariant}
-                    initial="initial"
-                    animate={isInView ? "animate" : "initial"}
-                    custom={i}
-                    className={className}
-                >
-                    {letter === " " ? "\u00A0" : letter}
-                </motion.span>
+        <div ref={ref} className="flex flex-wrap gap-x-2 justify-center">
+            {words.map((word, wi) => (
+                <span key={wi} className="flex">
+                    {word.split("").map((letter, li) => (
+                        <motion.span
+                            key={li}
+                            variants={letterVariant}
+                            initial="initial"
+                            animate={isInView ? "animate" : "initial"}
+                            custom={wi * 10 + li}
+                            className={className}
+                        >
+                            {letter}
+                        </motion.span>
+                    ))}
+                </span>
             ))}
         </div>
     );
