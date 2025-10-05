@@ -34,6 +34,13 @@ import carCard from "./heroSection/carCard.png";
 import homeCard from "./heroSection/homeCard.png";
 import heroBg from "./heroSection/heroBg.png";
 
+//BlogCover Images
+import blogCoverBg from "./blogCoverPage/BlogCoverBg.png";
+import discoverimg from "./blogCoverPage/discoverimg.png";
+import artimg1 from "./blogCoverPage/articleimg1.png";
+import artimg2 from "./blogCoverPage/articleimg2.png";
+import artimg3 from "./blogCoverPage/articleimg3.png";
+
 export {
     GirlImage,
     LinePattern,
@@ -63,5 +70,10 @@ export {
     heroBg,
     user1,
     user2,
-    user3
+    user3,
+    blogCoverBg,
+    discoverimg,
+    artimg1,
+    artimg2,
+    artimg3,
 };

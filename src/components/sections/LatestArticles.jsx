@@ -1,0 +1,92 @@
+import React from "react";
+import { motion } from "framer-motion";
+import AnimatedText from "../ui/AnimatedText";
+import { artimg1, artimg2, artimg3 } from "../../assets";
+import { MdArrowOutward } from "react-icons/md";
+
+const articles = [
+    {
+        id: 1,
+        title: "De beste tips voor verzekeringen",
+        date: "April 10, 2024",
+        description:
+            "Leer hoe je de juiste verzekering kiest voor jouw situatie.",
+        image: artimg1,
+    },
+    {
+        id: 2,
+        title: "De beste tips voor verzekeringen",
+        date: "April 10, 2024",
+        description:
+            "Leer hoe je de juiste verzekering kiest voor jouw situatie.",
+        image: artimg2,
+    },
+    {
+        id: 3,
+        title: "De beste tips voor verzekeringen",
+        date: "April 10, 2024",
+        description:
+            "Leer hoe je de juiste verzekering kiest voor jouw situatie.",
+        image: artimg3,
+    },
+];
+
+export default function LatestArticles() {
+    return (
+        <section className="w-full py-0 bg-white text-center"> {/* reduced top padding */}
+            <div className="max-w-7xl mx-auto px-4">
+                {/* Header */}
+                <div className="flex flex-row justify-center gap-2 mb-4"> {/* added small bottom margin for line gap */}
+                    <AnimatedText
+                        text="Discover our"
+                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                    />
+                    <AnimatedText
+                        text="latest articles"
+                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-[#3B4EDB]"
+                    />
+                </div>
+
+                <p className="text-gray-500 mb-12 leading-relaxed">
+                    Stay updated on trends and tips
+                </p>
+
+                {/* Articles Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    {articles.map((article, i) => (
+                        <motion.div
+                            key={article.id}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.2, duration: 0.6 }}
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition-all duration-300"
+                        >
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-64 object-cover"
+                            />
+                            <div className="p-6 text-left">
+                                {/* Date + Arrow in one row */}
+                                <div className="flex items-center justify-between mb-2">
+                                    <p className="text-sm text-gray-400">
+                                        Article · {article.date}
+                                    </p>
+                                    <MdArrowOutward className="text-gray-500 text-lg hover:translate-x-1 transition-transform" />
+                                </div>
+
+                                <h3 className="font-semibold text-lg mb-2 leading-tight">
+                                    {article.title}
+                                </h3>
+                                <p className="text-gray-600 text-sm mb-4">
+                                    {article.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
