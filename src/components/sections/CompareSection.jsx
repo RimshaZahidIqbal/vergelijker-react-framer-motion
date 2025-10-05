@@ -18,7 +18,7 @@ const CompareSection = () => {
         {stats.slice(0, 2).map((stat, index) => (
           <motion.div
             key={stat.id}
-            className={`w-[220px] h-[220px] bg-white rounded-2xl p-6 text-center cursor-pointer opacity-100  ${stat.tilt} `}
+            className={`w-[220px] h-[220px] bg-[#F8F8F8] rounded-2xl p-6 text-[#1D5E48] text-center cursor-pointer opacity-100  ${stat.tilt} `}
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
@@ -81,7 +81,7 @@ const CompareSection = () => {
         {stats.slice(2, 4).map((stat, index) => (
           <motion.div
             key={stat.id}
-            className={`w-[220px] h-[220px] bg-white rounded-2xl p-6 text-center cursor-pointer ${stat.tilt}`}
+            className={`w-[220px] h-[220px]  bg-[#F8F8F8] rounded-2xl p-6 text-[#1D5E48] text-center cursor-pointer ${stat.tilt}`}
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
