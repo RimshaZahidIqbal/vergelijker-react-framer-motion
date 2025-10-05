@@ -8,22 +8,29 @@ import Slider from '../components/ui/Slider'
 import sliderData from '../utils/SliderData'
 import BrandSection from '../components/sections/BrandSection'
 import ComparisonSection from '../components/sections/ComparisonSection '
+import HeroSection from '../components/sections/HeroSection'
 const Homepage = () => {
     return (
-        <div className='p-1 md:p-6 lg:p-12 xl:p-24 2xl:p-32 overflow-x-hidden'>
+        <div className='p-1 md:p-1 lg:p-10 xl:p-22 2xl:p-30 overflow-x-hidden'>
             <Navbar />
+            <HeroSection />
+            <br />
+            <CardSection />
+            <InsuranceSection />
+            <ComparisonSection />
             <CompareSection />
-
+            <InfoSection />
+            <Slider items={sliderData} />
+            <BrandSection />
             <br />
             {/* <AnimatedButton /> */}
 
-            <CardSection />
-            <InsuranceSection />
-            <InfoSection />
 
-            <Slider items={sliderData} />
-            <ComparisonSection />
-            <BrandSection />
+
+
+
+
+
 
         </div>
     )
