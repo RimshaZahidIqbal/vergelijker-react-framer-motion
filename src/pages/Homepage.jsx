@@ -9,6 +9,7 @@ import sliderData from '../utils/SliderData'
 import BrandSection from '../components/sections/BrandSection'
 import ComparisonSection from '../components/sections/ComparisonSection '
 import HeroSection from '../components/sections/HeroSection'
+import TestimonialsSection from '../components/sections/TestimonialsSection'
 const Homepage = () => {
     return (
         <div className='p-1 md:p-1 lg:p-10 xl:p-22 2xl:p-30 overflow-x-hidden'>
@@ -19,18 +20,13 @@ const Homepage = () => {
             <InsuranceSection />
             <ComparisonSection />
             <CompareSection />
+            <TestimonialsSection />
+            <br />
             <InfoSection />
             <Slider items={sliderData} />
             <BrandSection />
             <br />
             {/* <AnimatedButton /> */}
-
-
-
-
-
-
-
 
         </div>
     )
