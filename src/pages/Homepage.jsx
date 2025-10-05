@@ -7,6 +7,7 @@ import InsuranceSection from '../components/sections/InsuranceSection'
 import Slider from '../components/ui/Slider'
 import sliderData from '../utils/SliderData'
 import BrandSection from '../components/sections/BrandSection'
+import Footer from '../components/sections/Footer'
 const Homepage = () => {
     return (
         <div className='p-1 md:p-6 lg:p-12 xl:p-24 2xl:p-32 overflow-x-hidden'>
@@ -22,7 +23,7 @@ const Homepage = () => {
 
             <Slider items={sliderData} />
             <BrandSection />
-
+            <Footer />
         </div>
     )
 }
