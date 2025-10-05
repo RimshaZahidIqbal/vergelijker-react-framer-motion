@@ -20,7 +20,7 @@ const duplicatedIcons = [
 
 const BrandSection = () => {
     return (
-        <div className="py-12">
+        <div className="py-12 mb-20">
             <h4 className="font-[Neighbor] font-bold text-base leading-[150%] tracking-normal text-center mb-10">
                 "We work with the Netherlands' most trusted Brands"
             </h4>

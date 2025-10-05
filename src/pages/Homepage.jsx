@@ -7,6 +7,7 @@ import InsuranceSection from '../components/sections/InsuranceSection'
 import Slider from '../components/ui/Slider'
 import sliderData from '../utils/SliderData'
 import BrandSection from '../components/sections/BrandSection'
+import Footer from '../components/sections/Footer'
 import ComparisonSection from '../components/sections/ComparisonSection '
 import HeroSection from '../components/sections/HeroSection'
 import TestimonialsSection from '../components/sections/TestimonialsSection'
@@ -26,8 +27,7 @@ const Homepage = () => {
             <Slider items={sliderData} />
             <BrandSection />
             <br />
-            {/* <AnimatedButton /> */}
-
+            <Footer />
         </div>
     )
 }

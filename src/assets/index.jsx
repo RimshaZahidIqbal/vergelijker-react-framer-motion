@@ -5,7 +5,7 @@ import Logo from "./logo.png";
 import ReactLogo from "./react.svg";
 import CarInsurance1 from "./CarInsurance1.png";
 import CarInsurance2 from "./CarInsurance2.png";
-
+import VectorImage from "./Vector.png";
 // Icons
 import Logo1 from "./icons/logo1.svg";
 import Logo2 from "./icons/logo2.svg";
@@ -47,6 +47,7 @@ export {
     Logo2,
     CarInsurance1,
     CarInsurance2,
+    VectorImage,
     img1,
     img2,
     img3,
