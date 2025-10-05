@@ -24,9 +24,6 @@ const Homepage = () => {
             <Slider items={sliderData} />
             <BrandSection />
             <br />
-            {/* <AnimatedButton /> */}
-            <Slider items={sliderData} />
-            <BrandSection />
             <Footer />
         </div>
     )
