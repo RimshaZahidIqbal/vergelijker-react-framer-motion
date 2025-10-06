@@ -1,6 +1,6 @@
 import React from "react";
 import AnimatedText from "../ui/AnimatedText";
-import { discoverimg } from "../../assets"; // replace with your image
+import { discoverimg } from "../../assets";
 
 const DiscoverSection = () => {
     return (

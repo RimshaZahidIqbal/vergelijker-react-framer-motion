@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/sections/Navbar';
 import Homepage from './pages/Homepage';
 import BlogListingpage from './pages/BlogListingpage';
+import BlogDetailpage from './pages/BlogDetailpage';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             {/* <Route path="/results" element={<Results />} /> */}
             <Route path="/bloglisting" element={<BlogListingpage />} />
+            <Route path="/blogdetail" element={<BlogDetailpage />} />
           </Routes>
         </AnimatePresence>
       </div>

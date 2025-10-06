@@ -40,6 +40,7 @@ import discoverimg from "./blogCoverPage/discoverimg.png";
 import artimg1 from "./blogCoverPage/articleimg1.png";
 import artimg2 from "./blogCoverPage/articleimg2.png";
 import artimg3 from "./blogCoverPage/articleimg3.png";
+import blog from "./blogCoverPage/blogimg.png";
 
 export {
     GirlImage,
@@ -76,4 +77,5 @@ export {
     artimg1,
     artimg2,
     artimg3,
+    blog
 };

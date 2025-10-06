@@ -33,17 +33,18 @@ const articles = [
 
 export default function LatestArticles() {
     return (
-        <section className="w-full py-0 bg-white text-center"> {/* reduced top padding */}
+        <section className="w-full py-0 bg-white text-center">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Header */}
-                <div className="flex flex-row justify-center gap-2 mb-4"> {/* added small bottom margin for line gap */}
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2 mb-4 sm:mb-6">
                     <AnimatedText
                         text="Discover our"
-                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                        className="font-[Neighbor] font-semibold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] text-center sm:text-left"
                     />
                     <AnimatedText
                         text="latest articles"
-                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-[#3B4EDB]"
+                        className="font-[Neighbor] font-semibold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] text-[#3B4EDB] text-center sm:text-left"
                     />
                 </div>
 
