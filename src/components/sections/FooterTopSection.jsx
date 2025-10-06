@@ -11,7 +11,7 @@ const FooterTopSection = () => {
     return (
         <motion.div
             className="
-                w-11/12 sm:w-10/12 md:w-8/12 
+                w-11/12 sm:w-11/12 md:w-9/12 
                 bg-[#FCFF5C] rounded-3xl shadow-xl 
                 flex flex-col justify-between items-center
                 pt-8 md:pt-12 pb-0 text-center mx-auto relative overflow-hidden
@@ -26,16 +26,16 @@ const FooterTopSection = () => {
                     <motion.img
                         src={Logo}
                         alt="logo"
-                        className="w-20 md:w-28 cursor-pointer mb-1"
+                        className="w-20 md:w-32 cursor-pointer mb-1"
                         whileHover={{ scale: 1.2 }}
                         transition={{ type: "spring", stiffness: 300 }}
                     />
                     <AnimatedText
-                        className="mt-2 font-[Neighbor] text-[#0C0C0C] text-2xl md:text-5xl font-semibold"
+                        className="mt-2 font-[Neighbor] text-[#0C0C0C]  text-2xl md:text-5xl font-semibold"
                         text="Ready to confidently find"
                     />
                     <AnimatedText
-                        className="mt-2 font-[Neighbor] text-[#0C0C0C] text-2xl md:text-5xl font-semibold"
+                        className="mt-2 font-[Neighbor] text-[#181818] text-2xl md:text-5xl font-semibold"
                         text="your perfect match?"
                     />
                 </div>

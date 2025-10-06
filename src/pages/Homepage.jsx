@@ -14,8 +14,7 @@ import TestimonialsSection from '../components/sections/TestimonialsSection'
 
 const Homepage = () => {
     return (
-        <div className='p-1 md:p-1 lg:p-10 xl:p-22 2xl:p-30 overflow-x-hidden'>
-            <Navbar />
+        <div className='p-1 md:p-1 lg:p-3 xl:p-2 2xl:p-6 overflow-x-hidden'>
             <HeroSection />
             <br />
             <CardSection />

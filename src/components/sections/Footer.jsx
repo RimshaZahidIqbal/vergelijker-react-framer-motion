@@ -90,13 +90,17 @@ const Footer = () => {
             <div className="w-full bg-[#0C0C0C] rounded-3xl py-12 px-6 relative text-white/80 overflow-hidden">
                 {/* Newsletter + Buttons */}
                 <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-12 relative z-10">
-                    {["Home", "Blogs", "Vergelijkingen", "Over ons"].map((text, i) => (
-                        <RoundedButton
-                            key={i}
-                            text={text}
-                            className="min-w-[140px] md:min-w-[160px] text-xs sm:text-sm md:text-lg border border-white/80 text-white/80 hover:border-white/70"
-                        />
-                    ))}
+
+                    <div className="flex flex-between gap-5">
+
+                        {["Home", "Blogs", "Vergelijkingen", "Over ons"].map((text, i) => (
+                            <RoundedButton
+                                key={i}
+                                text={text}
+                                className="min-w-[140px] md:min-w-[160px] text-xs sm:text-sm md:text-lg border border-white/80 text-white/80 hover:border-white/70"
+                            />
+                        ))}
+                    </div>
                     <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
                         <input
                             type="email"
