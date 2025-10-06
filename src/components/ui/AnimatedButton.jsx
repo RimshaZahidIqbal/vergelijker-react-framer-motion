@@ -9,10 +9,10 @@ const AnimatedButton = ({
         <button
             className={twMerge(
                 `
-        relative inline-flex items-center gap-2 px-6 py-3 
+        relative inline-flex justify-between items-center gap-2 px-6 py-3 
         rounded-xl font-medium text-white 
         bg-[#E32FB6]  
-        overflow-hidden group
+        overflow-hidden group cursor-pointer
         `,
                 className
             )}

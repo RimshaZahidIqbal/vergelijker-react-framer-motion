@@ -40,7 +40,9 @@ import discoverimg from "./blogCoverPage/discoverimg.png";
 import artimg1 from "./blogCoverPage/articleimg1.png";
 import artimg2 from "./blogCoverPage/articleimg2.png";
 import artimg3 from "./blogCoverPage/articleimg3.png";
-
+// footer images
+import VectorE from "./footer/Vector-e.png";
+import VectorV from "./footer/Vector-V.png";
 export {
     GirlImage,
     LinePattern,
@@ -76,4 +78,6 @@ export {
     artimg1,
     artimg2,
     artimg3,
+    VectorE,
+    VectorV
 };
