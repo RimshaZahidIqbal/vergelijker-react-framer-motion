@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 🔥 for routing
+import { useNavigate } from "react-router-dom";
 
 const SliderCard = ({ image, title, description, height }) => {
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ const SliderCard = ({ image, title, description, height }) => {
 
     return (
         <div
-            onClick={handleClick} // 🔥 entire card clickable
+            onClick={handleClick}
             className="min-w-[280px] xs:min-w-[300px] sm:min-w-[350px] md:min-w-[400px] lg:min-w-[470px] bg-white rounded-2xl overflow-hidden flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow duration-300"
         >
             <img

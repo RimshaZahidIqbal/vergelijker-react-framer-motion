@@ -38,21 +38,21 @@ const GetInTouch = () => {
             </p>
 
             {/* Cards */}
-            <div className="flex flex-col sm:flex-row gap-2 md:gap-4 lg:gap-12">
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 w-full items-center lg:justify-center">
                 {contactInfo.map((item) => (
                     <div
                         key={item.id}
-                        className="flex items-center justify-start gap-4 w-full sm:w-[360px] h-[106px] px-4 md:px-6 rounded-[25.72px] border border-gray-300 shadow-sm transition-colors duration-300 hover:bg-[#1D5E48] hover:text-white cursor-pointer"
+                        className="flex items-center justify-center gap-4 w-full sm:w-[360px] lg:w-[360px] h-[106px] px-4 md:px-6 rounded-[25.72px] border border-gray-300 shadow-sm transition-colors duration-300 hover:bg-[#1D5E48] hover:text-white cursor-pointer"
                     >
                         {/* Icon */}
-                        <div className="flex items-center justify-center  w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-400 text-white  text-sm  md:text-xl transition-colors duration-300 group-hover:bg-white group-hover:text-pink-400">
+                        <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-400 text-white text-sm md:text-xl transition-colors duration-300">
                             {item.icon}
                         </div>
 
                         {/* Text */}
                         <div className="flex flex-col">
-                            <span className="text-sm text-gray-500 group-hover:text-white">{item.title}</span>
-                            <span className="text-base font-medium group-hover:text-white">{item.text}</span>
+                            <span className="text-sm text-gray-500">{item.title}</span>
+                            <span className="text-base font-medium">{item.text}</span>
                         </div>
                     </div>
                 ))}

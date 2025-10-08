@@ -35,7 +35,7 @@ import homeCard from "./heroSection/homeCard.png";
 import heroBg from "./heroSection/heroBg.png";
 
 //BlogCover Images
-import blogCoverBg from "./blogCoverPage/BlogCoverBg.png";
+import blogCoverBg from "./blogCoverPage/blogCoverBg.png";
 import discoverimg from "./blogCoverPage/discoverimg.png";
 import artimg1 from "./blogCoverPage/articleimg1.png";
 import artimg2 from "./blogCoverPage/articleimg2.png";

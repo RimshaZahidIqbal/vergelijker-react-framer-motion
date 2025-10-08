@@ -14,6 +14,7 @@ const BlogListingpage = () => {
             <LatestArticles />
             <ContactInfo />
             <BrandSection />
+            <br />
             <Footer />
         </div>
     )

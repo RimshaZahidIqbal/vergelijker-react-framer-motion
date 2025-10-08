@@ -63,8 +63,8 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/about">Over ons</NavLink>
-                    <NavLink to="/compare">Vergelijkingen</NavLink>
+                    <NavLink to="#">Over ons</NavLink>
+                    <NavLink to="#">Vergelijkingen</NavLink>
                     <NavLink to="/blog">Blog</NavLink> {/* 🔥 goes to BlogListingPage */}
                 </div>
 
