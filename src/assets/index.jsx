@@ -42,7 +42,7 @@ import artimg2 from "./blogCoverPage/articleimg2.png";
 import artimg3 from "./blogCoverPage/articleimg3.png";
 // footer images
 import VectorE from "./footer/Vector-e.png";
-import VectorV from "./footer/Vector-V.png";
+import VectorV from "./footer/Vector-v.png";
 import blog from "./blogCoverPage/blogimg.png";
 
 export {
