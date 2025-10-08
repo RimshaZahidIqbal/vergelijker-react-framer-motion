@@ -81,6 +81,6 @@ export {
     artimg2,
     artimg3,
     VectorE,
-    VectorV
+    VectorV,
     blog
 };
