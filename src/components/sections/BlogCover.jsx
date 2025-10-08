@@ -6,7 +6,7 @@ import AnimatedText from "../ui/AnimatedText";
 
 const BlogCover = () => {
     return (
-        <section className="relative w-full min-h-screen flex flex-col items-center text-white overflow-hidden rounded-b-[20px]">
+        <section className="relative w-full flex flex-col items-center text-white overflow-hidden rounded-b-[20px]">
             {/* ------------------- TOP SECTION ------------------- */}
             <div className="relative w-full bg-[#4050DC] rounded-t-[20px] overflow-hidden">
                 {/* BG Pattern */}
@@ -17,25 +17,25 @@ const BlogCover = () => {
                 />
 
                 {/* CONTENT */}
-                <div className="relative flex flex-col md:flex-row justify-between items-start w-[90%] max-w-[1400px] mx-auto pt-16 pb-16"> {/* reduced bottom padding */}
+                <div className="relative flex flex-col md:flex-col lg:flex-row justify-between items-start w-[90%] max-w-[1400px] mx-auto pt-16">
                     {/* Heading + Buttons */}
-                    <div className="flex flex-col gap-[43px] w-full md:w-[923px]">
+                    <div className="flex flex-col gap-[43px] w-full lg:w-[923px]">
                         <div className="flex flex-col items-start gap-4">
-                            <div className="flex flex-wrap md:w-3/3 items-center leading-tight">
+                            <div className="flex flex-col md:flex-col lg:flex-wrap items-start leading-tight">
                                 <AnimatedText
                                     text="Discover valuable"
-                                    className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                                    className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-5xl lg:text-6xl tracking-[-0.02em]"
                                 />
                                 <AnimatedText
                                     text="insights and tips"
-                                    className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-[#FAFE13]"
+                                    className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-5xl lg:text-6xl tracking-[-0.02em] text-[#FAFE13]"
                                 />
 
-                                {/* Last part + image together inline */}
-                                <div className="flex items-center">
+                                {/* Last part + image inline */}
+                                <div className="flex items-center mt-2">
                                     <AnimatedText
                                         text="in our blog"
-                                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em]"
+                                        className="font-[Neighbor] font-semibold text-4xl sm:text-5xl md:text-5xl lg:text-6xl tracking-[-0.02em]"
                                     />
                                     <motion.img
                                         src={face}
@@ -56,18 +56,18 @@ const BlogCover = () => {
                     </div>
 
                     {/* Paragraph + Buttons (Right Side) */}
-                    <div className="flex flex-col gap-4 mt-6 md:mt-0 md:w-3/4 px-4 sm:px-6 md:px-0">
-                        <p className="text-base sm:text-lg leading-[1.6]">
+                    <div className="flex flex-col gap-4 mt-6 md:mt-6 lg:mt-0 w-full lg:w-3/4 px-4 sm:px-6 md:px-4 lg:px-0">
+                        <p className="text-base sm:text-lg md:text-base lg:text-lg leading-[1.6]">
                             Our blog offers extensive knowledge and practical advice to help
                             you make smart choices. Stay updated on the latest trends and
                             developments in the world of comparisons.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row items-start sm:items-start md:items-start lg:items-center gap-3 sm:gap-3 md:gap-3 lg:gap-4">
                             <AnimatedButton text={"Read More"} />
                             <input
                                 type="text"
                                 placeholder="Search product"
-                                className="px-3 py-2 w-full sm:w-auto rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FAFE13]"
+                                className="px-3 py-2 w-full sm:w-full md:w-full lg:w-auto rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FAFE13]"
                             />
                         </div>
                     </div>
