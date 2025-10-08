@@ -5,49 +5,63 @@ import AnimatedText from "../ui/AnimatedText";
 const CardSection = () => {
     return (
         <>
-            <div className="text-left mb-6  leading-[1.31] tracking-[-0.02em]">
+            <div className="text-left mb-6 leading-[1.31] tracking-[-0.02em] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
                 <h1
-                    className="font-[Neighbor] font-semibold text-[62px] leading-[103%] tracking-[-0.02em] text-gray-900"
+                    className="
+      font-[Neighbor] font-semibold 
+      text-[28px] sm:text-[36px] md:text-[48px] lg:text-[58px] xl:text-[62px] 2xl:text-[68px]
+      leading-[1.1] tracking-[-0.02em] text-gray-900
+    "
                 >
                     {/* Line 1 */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                         <AnimatedText text="Get your" />
 
                         {/* Girl Image */}
                         <img
                             src={GirlImage}
                             alt="Girl Illustration"
-                            className="w-[133px] h-[44px] rounded-full object-cover"
+                            className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] xl:w-[133px] h-auto rounded-full object-cover"
                         />
 
                         {/* Circle with Group4 */}
-                        <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#FE65D9] opacity-100">
+                        <span className="inline-flex items-center justify-center 
+        w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 
+        rounded-full bg-[#FE65D9]"
+                        >
                             <img
                                 src={Group4}
                                 alt="Group 4"
-                                className="w-6 h-6 object-contain"
+                                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 object-contain"
                             />
                         </span>
                     </div>
 
                     {/* Line 2 */}
-                    <div className="inline-flex gap-3">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
                         <AnimatedText className="text-[#3B4EDB]" text="perfect match" />
                         <AnimatedText text="in" />
                     </div>
 
-                    {/* Line 3 */}
-                    <AnimatedText text="3 simple steps" />
+                    {/* Line 3 (Left Aligned Fix) */}
+                    <div className="mt-1 sm:mt-2 flex items-start">
+                        <AnimatedText text="3 simple steps" />
+                    </div>
                 </h1>
+
                 <p
                     className="
-    flex items-center justify-start font-[Geist] font-normal text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]
-    leading-[1.31] tracking-[-0.02em] text-center "
+      mt-3 sm:mt-4 md:mt-5
+      font-[Geist] font-normal 
+      text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px]
+      leading-[1.4] tracking-[-0.02em] text-left text-gray-700
+    "
                 >
                     Step-by-Step Process
                 </p>
-
             </div>
+
+
 
             <div className="grid grid-cols-1 w-full  sm:grid-cols-2 lg:grid-cols-3 gap-1.5 ">
                 <Card
