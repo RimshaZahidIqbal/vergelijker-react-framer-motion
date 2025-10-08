@@ -23,6 +23,7 @@ const Homepage = () => {
             <CompareSection />
             <TestimonialsSection />
             <InfoSection />
+
             <Slider items={sliderData} />
             <BrandSection />
             <br />
