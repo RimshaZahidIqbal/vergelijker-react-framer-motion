@@ -15,7 +15,7 @@ const BlogDetailpage = () => {
             <LatestArticles />
             <TestimonialsSection theme="white" />
             <BrandSection />
-
+            <br />
             <Footer />
         </div>
     )
