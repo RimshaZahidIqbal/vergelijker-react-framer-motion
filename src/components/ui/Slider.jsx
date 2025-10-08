@@ -15,11 +15,11 @@ const Slider = ({ items }) => {
         }
     };
 
-    const heights = [400, 550, 480]; // Mobile friendly heights
+    const heights = [400, 550, 480]; // responsive heights
 
     return (
         <div className="relative w-full">
-            {/* Slider container - EXACT SAME LAYOUT */}
+            {/* Slider container */}
             <div
                 ref={scrollRef}
                 className="flex gap-4 w-full pointer-events-none overflow-x-hidden"
@@ -34,7 +34,7 @@ const Slider = ({ items }) => {
                 ))}
             </div>
 
-            {/* Bottom Prev / Next buttons - EXACT SAME LAYOUT */}
+            {/* Prev / Next buttons */}
             <div className="flex gap-4 pt-6 justify-end">
                 <button
                     onClick={() => scroll("left")}

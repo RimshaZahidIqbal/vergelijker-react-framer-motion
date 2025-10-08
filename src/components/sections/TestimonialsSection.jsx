@@ -37,8 +37,8 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
             {/* Top Blur Overlay */}
             <div
                 className={`absolute top-0 left-0 w-full h-8 sm:h-12 lg:h-16 pointer-events-none z-20 ${isWhite
-                        ? "bg-gradient-to-b from-white to-transparent"
-                        : "bg-gradient-to-b from-[#3B4EDB] to-transparent"
+                    ? "bg-gradient-to-b from-white to-transparent"
+                    : "bg-gradient-to-b from-[#3B4EDB] to-transparent"
                     }`}
             />
 
@@ -56,8 +56,8 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
                     <div
                         key={i}
                         className={`${isWhite
-                                ? "bg-black/5 border border-black/10 text-black"
-                                : "bg-white/10 border border-white/20 text-white"
+                            ? "bg-black/5 border border-black/10 text-black"
+                            : "bg-white/10 border border-white/20 text-white"
                             } backdrop-blur-xl rounded-2xl lg:rounded-3xl 
               w-full h-[280px] sm:h-[300px] lg:h-[340px] xl:h-[380px] 2xl:h-[420px]
               p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 
@@ -118,8 +118,8 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
             {/* Bottom Blur Overlay */}
             <div
                 className={`absolute bottom-0 left-0 w-full h-8 sm:h-12 lg:h-16 pointer-events-none z-20 ${isWhite
-                        ? "bg-gradient-to-t from-white to-transparent"
-                        : "bg-gradient-to-t from-[#3B4EDB] to-transparent"
+                    ? "bg-gradient-to-t from-white to-transparent"
+                    : "bg-gradient-to-t from-[#3B4EDB] to-transparent"
                     }`}
             />
         </div>
@@ -186,7 +186,7 @@ const TestimonialsSection = ({ theme = "blue" }) => {
             <div className="relative flex justify-center items-center z-10 mt-4 md:mt-6 lg:mt-0">
                 <AnimatedButton
                     text={"See All Testimonials"}
-                    className={isWhite ? "text-black border-black hover:bg-black/5" : ""}
+                    className={isWhite ? "text-white border-black hover:bg-black/5" : ""}
                 />
             </div>
         </div>

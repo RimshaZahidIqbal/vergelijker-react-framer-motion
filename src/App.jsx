@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             {/* <Route path="/results" element={<Results />} /> */}
-            <Route path="/bloglisting" element={<BlogListingpage />} />
+            <Route path="/blog" element={<BlogListingpage />} />
             <Route path="/blogdetail" element={<BlogDetailpage />} />
           </Routes>
         </AnimatePresence>
