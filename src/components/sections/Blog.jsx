@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaCopy } from "react-icons/fa";
 import { blog, face } from "../../assets";
-import AnimatedButton from "../ui/AnimatedButton";
 import AnimatedText from "../ui/AnimatedText";
 
 const Blog = () => {
     const [showMore, setShowMore] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 968);
 
-    // ✅ Dynamically track screen resize to update layout
+    //Dynamically track screen resize to update layout
     useEffect(() => {
         const handleResize = () => setIsLargeScreen(window.innerWidth >= 968);
         window.addEventListener("resize", handleResize);
