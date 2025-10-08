@@ -25,34 +25,33 @@ const ComparisonSection = () => {
     };
 
     return (
-        <section className="w-full max-w-[1200px] mx-auto text-center py-12">
+        <section className="w-full max-w-[1400px] mx-auto text-center py-10 px-3 sm:px-6 lg:px-8 xl:px-10">
             {/* Heading */}
-
-            <div className="flex flex-col items-center justify-center text-center ">
+            <div className="flex flex-col items-center justify-center text-center space-y-2">
                 <AnimatedText
                     text="Popular comparisons -"
-                    className="font-[Neighbor] font-semibold text-[66px] leading-[103%] tracking-[-0.02em] text-black"
+                    className="font-[Neighbor] font-semibold 
+                    text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] xl:text-[80px] 
+                    leading-[103%] tracking-[-0.02em] text-black"
                 />
                 <AnimatedText
                     text="start here"
-                    className="font-[Neighbor] font-semibold text-[66px] leading-[103%] tracking-[-0.02em] text-black"
+                    className="font-[Neighbor] font-semibold 
+                    text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] xl:text-[80px] 
+                    leading-[103%] tracking-[-0.02em] text-black"
                 />
             </div>
 
             {/* Filter Group */}
-            <div className="flex justify-center gap-4 mt-8 flex-wrap">
+            <div className="flex justify-center gap-3 sm:gap-4 mt-8 flex-wrap">
                 {filters.map((f, index) => (
                     <button
                         key={f.id}
                         onClick={() => setActiveIndex(index)}
-                        className={`
-              rounded-full px-5 py-2 border text-sm font-medium
-              transition-colors duration-300
-              ${active.id === f.id
+                        className={`rounded-full px-4 sm:px-5 lg:px-6 py-2 border text-xs sm:text-sm lg:text-base font-medium transition-colors duration-300 ${active.id === f.id
                                 ? "bg-[#3B4EDB] text-white"
                                 : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
-                            }
-            `}
+                            }`}
                     >
                         {f.label}
                     </button>
@@ -60,68 +59,81 @@ const ComparisonSection = () => {
             </div>
 
             {/* Content Section */}
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mt-12">
+            <div
+                className="
+                flex flex-col lg:flex-row justify-center lg:justify-between items-center 
+                gap-8 lg:gap-12 xl:gap-16 mt-12 text-left lg:text-left
+            "
+            >
                 {/* Images */}
-                <div className="flex gap-6">
+                <div className="flex gap-6 justify-center items-center">
+                    {/* Main Image */}
                     <img
                         src={CarInsurance1}
                         alt="Main"
-                        className="w-[458px] h-[379px] object-cover rounded-[20px]"
+                        className="
+                            w-[250px] sm:w-[320px] md:w-[420px] lg:w-[520px] xl:w-[580px] 
+                            h-auto object-cover rounded-[16px] lg:rounded-[20px]
+                        "
                     />
-                    <div className="flex flex-col justify-between">
+                    {/* Secondary Image - hidden on mobile */}
+                    <div className="hidden sm:flex flex-col justify-between">
                         <img
                             src={CarInsurance2}
                             alt="Small"
-                            className="w-[228px] h-[252px] object-cover rounded-[16px]"
+                            className="
+                                w-[120px] sm:w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] 
+                                h-auto object-cover rounded-[12px] lg:rounded-[16px]
+                            "
                         />
-
-                        {/* Counter */}
-                        <span className="font-geist font-semibold text-[16px] leading-[131%] tracking-[-0.02em] text-left">
+                        <span className="font-geist font-semibold text-sm sm:text-base lg:text-lg text-left mt-2">
                             [{active.counter}]
                         </span>
-
-
-                    </div>
-                    <div className="flex flex-col  items-start lg:items-center gap-8 mt-12">
-                        {/* Text + Button */}
-                        <div className="flex flex-col text-left gap-4">
-                            <AnimatedText
-                                text={active.label}
-                                className="font-[Neighbor] font-semibold text-4xl text-black"
-                            />
-
-                            <p className="text-lg text-gray-700">
-                                Find coverage from €19/month <br />
-                                Compare 25+ insurers instantly
-                            </p>
-                            <AnimatedButton text={`Compare ${active.label}`} />
-                        </div>
-                        {/* Footer with counter + navigation */}
-                        <div className="flex justify-between items-center mt-12">
-
-
-                            {/* Prev / Next */}
-                            <div className="flex gap-4 pt-6 justify-end ">
-                                <button
-                                    onClick={handlePrev}
-                                    className="flex items-center gap-2 px-4 py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white"
-                                >
-                                    <FaArrowLeftLong size={16} /> Prev
-                                </button>
-                                <button
-                                    onClick={handleNext}
-                                    className="flex items-center gap-2 px-4 py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white"
-                                >
-                                    Next <FaArrowRightLong size={16} />
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
+                {/* Text + Button + Nav */}
+                <div
+                    className="
+                    flex flex-col items-center lg:items-start text-center lg:text-left
+                    gap-6 w-full sm:w-auto max-w-[440px] xl:max-w-[480px]
+                "
+                >
+                    <AnimatedText
+                        text={active.label}
+                        className="font-[Neighbor] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] text-black"
+                    />
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700">
+                        Find coverage from €19/month <br />
+                        Compare 25+ insurers instantly
+                    </p>
+                    <AnimatedButton text={`Compare ${active.label}`} />
 
+                    {/* Prev / Next + Counter */}
+                    <div className="flex items-center justify-center lg:justify-start gap-4 w-full pt-4">
+                        {/* Counter (shown here only on mobile) */}
+                        <span className="font-geist font-semibold text-base sm:hidden">
+                            [{active.counter}]
+                        </span>
+
+                        {/* Prev / Next */}
+                        <div className="flex gap-3 sm:gap-4">
+                            <button
+                                onClick={handlePrev}
+                                className="flex items-center gap-2 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white text-sm sm:text-base lg:text-lg"
+                            >
+                                <FaArrowLeftLong size={16} /> Prev
+                            </button>
+                            <button
+                                onClick={handleNext}
+                                className="flex items-center gap-2 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white text-sm sm:text-base lg:text-lg"
+                            >
+                                Next <FaArrowRightLong size={16} />
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </section>
     );
 };

@@ -33,7 +33,7 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
     const isWhite = theme === "white";
 
     return (
-        <div className="relative h-[400px] lg:h-[600px] overflow-hidden">
+        <div className="relative h-[400px] lg:h-[640px] 2xl:h-[720px] overflow-hidden">
             {/* Top Blur Overlay */}
             <div
                 className={`absolute top-0 left-0 w-full h-8 sm:h-12 lg:h-16 pointer-events-none z-20 ${isWhite
@@ -58,7 +58,11 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
                         className={`${isWhite
                                 ? "bg-black/5 border border-black/10 text-black"
                                 : "bg-white/10 border border-white/20 text-white"
-                            } backdrop-blur-xl rounded-2xl lg:rounded-3xl w-full h-[280px] sm:h-[300px] p-4 md:p-5 lg:p-[20px] flex flex-col gap-3 md:gap-4 lg:gap-[18px] shadow-lg mx-auto mb-4`}
+                            } backdrop-blur-xl rounded-2xl lg:rounded-3xl 
+              w-full h-[280px] sm:h-[300px] lg:h-[340px] xl:h-[380px] 2xl:h-[420px]
+              p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 
+              flex flex-col gap-3 md:gap-4 lg:gap-[18px] 
+              shadow-lg mx-auto mb-4`}
                     >
                         {/* Stars */}
                         <div className="flex gap-1 text-[#FAFE13]">
@@ -71,7 +75,7 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
 
                         {/* Heading */}
                         <h3
-                            className={`font-[Neighbor] text-base sm:text-[17px] lg:text-[18px] font-semibold leading-[120%] ${isWhite ? "text-black" : "text-white"
+                            className={`font-[Neighbor] text-base sm:text-[17px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold leading-[120%] ${isWhite ? "text-black" : "text-white"
                                 }`}
                         >
                             Great value home exercise
@@ -79,7 +83,7 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
 
                         {/* Paragraph */}
                         <p
-                            className={`font-[Geist] text-sm sm:text-[15px] leading-[150%] overflow-hidden flex-1 ${isWhite ? "text-black/80" : "text-white/90"
+                            className={`font-[Geist] text-sm sm:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px] leading-[150%] overflow-hidden flex-1 ${isWhite ? "text-black/80" : "text-white/90"
                                 }`}
                         >
                             {item.text}
@@ -127,8 +131,10 @@ const TestimonialsSection = ({ theme = "blue" }) => {
 
     return (
         <div
-            className={`relative w-full max-w-[1408px] mx-auto rounded-[30px] overflow-hidden py-8 md:py-12 lg:py-[80px] flex flex-col gap-6 md:gap-8 lg:gap-[50px] px-4 sm:px-6 lg:px-8 ${isWhite ? "bg-white text-black" : "bg-[#3B4EDB] text-white"
-                }`}
+            className={`relative w-full max-w-[1920px] 2xl:max-w-[2400px] mx-auto rounded-[30px] overflow-hidden 
+                  py-8 md:py-12 lg:py-[80px] flex flex-col gap-6 md:gap-8 lg:gap-[50px] 
+                  px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20 
+                  ${isWhite ? "bg-white text-black" : "bg-[#3B4EDB] text-white"}`}
         >
             {/* Background Pattern */}
             <img
@@ -138,26 +144,26 @@ const TestimonialsSection = ({ theme = "blue" }) => {
             />
 
             {/* Top Section */}
-            <div className="relative flex flex-col lg:flex-row justify-between items-start lg:px-[70px] z-10 gap-6 md:gap-8">
+            <div className="relative flex flex-col lg:flex-row justify-between items-start lg:px-[70px] xl:px-[100px] 2xl:px-[120px] z-10 gap-6 md:gap-8">
                 <div className="flex flex-wrap max-w-5xl leading-tight">
                     <AnimatedText
                         text="Join "
-                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] ${isWhite ? "text-black" : "text-white"
+                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] tracking-[-0.02em] ${isWhite ? "text-black" : "text-white"
                             }`}
                     />
                     <AnimatedText
                         text="thousands of "
-                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] ${isWhite ? "text-[#3B4EDB]" : "text-[#FAFE13]"
+                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] tracking-[-0.02em] ${isWhite ? "text-[#3B4EDB]" : "text-[#FAFE13]"
                             }`}
                     />
                     <AnimatedText
                         text="satisfied switchers "
-                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] ${isWhite ? "text-[#3B4EDB]" : "text-white"
+                        className={`block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] tracking-[-0.02em] ${isWhite ? "text-[#3B4EDB]" : "text-white"
                             }`}
                     />
                 </div>
                 <p
-                    className={`font-[Geist] text-sm sm:text-[16px] leading-[150%] max-w-full lg:max-w-[400px] mt-0 ${isWhite ? "text-black/80" : "text-white/90"
+                    className={`font-[Geist] text-sm sm:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] leading-[150%] max-w-full lg:max-w-[400px] mt-0 ${isWhite ? "text-black/80" : "text-white/90"
                         }`}
                 >
                     Vergelijker.nl compares insurance, energy, telecom & financial products
@@ -166,7 +172,7 @@ const TestimonialsSection = ({ theme = "blue" }) => {
             </div>
 
             {/* Infinite Scroll Columns */}
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 z-10 lg:px-[70px]">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 z-10 lg:px-[70px] xl:px-0 2xl:px-[100px]">
                 <InfiniteScrollColumn testimonials={testimonials} speed={22} theme={theme} />
                 <div className="hidden sm:block">
                     <InfiniteScrollColumn testimonials={testimonials} speed={24} reverse theme={theme} />
