@@ -18,15 +18,15 @@ import user2 from "./icons/user2.png";
 import user3 from "./icons/user3.png";
 
 //ComparisonSection Images
-import img1 from "./ComparisonSection/image1.png";
-import img2 from "./ComparisonSection/image2.png";
-import img3 from "./ComparisonSection/image3.png";
-import img4 from "./ComparisonSection/image4.png";
-import img5 from "./ComparisonSection/image5.png";
-import img6 from "./ComparisonSection/image6.png";
-import img7 from "./ComparisonSection/image7.png";
-import img8 from "./ComparisonSection/image8.png";
-import img9 from "./ComparisonSection/image9.png";
+import img1 from "./comparisonSection/image1.png";
+import img2 from "./comparisonSection/image2.png";
+import img3 from "./comparisonSection/image3.png";
+import img4 from "./comparisonSection/image4.png";
+import img5 from "./comparisonSection/image5.png";
+import img6 from "./comparisonSection/image6.png";
+import img7 from "./comparisonSection/image7.png";
+import img8 from "./comparisonSection/image8.png";
+import img9 from "./comparisonSection/image9.png";
 
 //HeroSection Images
 import face from "./heroSection/faceImage.svg";
