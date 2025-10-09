@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link } from "react-router-dom"; // 🔥 Add this line
-import logo from "../../assets/logo.png"; // apna logo ka path
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ const Navbar = () => {
                     x2="100"
                     y2="2"
                     stroke="#000000"
-                    strokeWidth="2"
+                    strokeWidth="1"
                     variants={draw}
                 />
             </motion.svg>
@@ -50,12 +50,13 @@ const Navbar = () => {
 
     return (
         <nav className="w-full bg-white gap-x-6 gap-y-6 top-0 left-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            {/* <nav className="w-full bg-white gap-x-6 gap-y-6 top-0 left-0 z-50"> */}
+            <div className="px-10 sm:px-10 lg:px-16 flex items-center justify-between h-16">
                 {/* Logo */}
                 <motion.img
                     src={logo}
                     alt="logo"
-                    className="w-28 cursor-pointer"
+                    className="w-40 cursor-pointer"
                     whileHover={{ scale: 1.2 }}
                     transition={{ type: "spring", stiffness: 300 }}
                 />
@@ -69,13 +70,13 @@ const Navbar = () => {
                 </div>
 
                 {/* Search Bar */}
-                <div className="hidden md:block">
+                {/* <div className="hidden md:block">
                     <input
                         type="text"
                         placeholder="Search product"
                         className="px-3 py-1 rounded-md border border-gray-300"
                     />
-                </div>
+                </div> */}
 
                 {/* Mobile Hamburger */}
                 <div className="md:hidden">

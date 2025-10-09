@@ -22,6 +22,7 @@ const InfoSection = () => {
                         Tag='h2'
                         className="font-[Neighbor] font-medium text-[41px]  lg:text-[64px] leading-[100%]  tracking-[-0.03em] max-w-2xl text-[#212121]"
                     />
+
                     <p
                         className="
                     w-full font-normal  

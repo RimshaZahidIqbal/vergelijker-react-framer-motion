@@ -5,7 +5,7 @@ import AnimatedText from "../ui/AnimatedText";
 const CardSection = () => {
     return (
         <>
-            <div className="text-left mb-6 leading-[1.31] tracking-[-0.02em] w-full py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12">
+            <div className="text-left mb-6 leading-[1.31] tracking-[-0.02em] w-full pt-0 p-3  sm:py-14 md:py-16 px-4 sm:px-6 md:px-12">
                 <h1
                     className="
       font-[Neighbor] font-semibold 
@@ -62,7 +62,7 @@ const CardSection = () => {
 
 
 
-            <div className=" grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-3 gap-1.5 ">
+            <div className="px-4  grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 ">
                 <Card
                     icon={<img src={Group1} alt="Step 01" className="w-6 h-6" />}
                     number="Step 01"

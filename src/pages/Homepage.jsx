@@ -11,10 +11,11 @@ import Footer from '../components/sections/Footer'
 import ComparisonSection from '../components/sections/ComparisonSection '
 import HeroSection from '../components/sections/HeroSection'
 import TestimonialsSection from '../components/sections/TestimonialsSection'
+import Spacer from '../components/ui/Spacer'
 
 const Homepage = () => {
     return (
-        <div className='p-1 md:p-1 lg:p-3 xl:p-2 2xl:p-6 overflow-x-hidden'>
+        <div className=' pt-0 p-1 md:p-1 lg:p-3 xl:p-2 xl:pt-0 2xl:p-6  2xl:pt-0 overflow-x-hidden'>
             <HeroSection />
             <br />
             <CardSection />
@@ -23,7 +24,7 @@ const Homepage = () => {
             <CompareSection />
             <TestimonialsSection />
             <InfoSection />
-
+            <Spacer len="4" />
             <Slider items={sliderData} />
             <BrandSection />
             <br />

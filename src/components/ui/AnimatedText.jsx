@@ -1,19 +1,20 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { motion, useInView } from "framer-motion";
 
 const AnimatedText = ({
     text,
     as: Tag = "p",
     className = "",
-    lineBreakChar = "\n", // split character for new lines
+    lineBreakChar = "\n",
 }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, margin: "-50px" });
 
+    // Motion variants for each letter
     const letterVariant = {
-        initial: { y: 20, opacity: 0 },
-        animate: (i) => ({
+        hidden: { y: 20, opacity: 0 },
+        visible: (i) => ({
             y: 0,
             opacity: 1,
             transition: {
@@ -24,45 +25,52 @@ const AnimatedText = ({
         }),
     };
 
-    // Normalize input
-    const segments =
-        typeof text === "string"
-            ? [{ value: text, color: "" }]
-            : Array.isArray(text)
-                ? text
-                : [];
+    // 🧠 Precompute segments only once using useMemo
+    const segments = useMemo(() => {
+        if (typeof text === "string") return [{ value: text, color: "" }];
+        if (Array.isArray(text)) return text;
+        return [];
+    }, [text]);
 
     return (
-        <Tag ref={ref} className={`flex flex-col  ${className}`}>
-            {segments.map((segment, si) =>
-                segment.value
-                    .split(lineBreakChar)
-                    .map((line, liIndex) => (
+        <Tag ref={ref} className={`flex flex-col ${className}`}>
+            {segments.map((segment, si) => {
+                const lines = segment.value.split(lineBreakChar);
+
+                return lines.map((line, li) => {
+                    const words = line.split(" ");
+
+                    return (
                         <span
-                            key={`${si}-line-${liIndex}`}
-                            className={`flex flex-wrap gap-x-2  ${segment.color}`}
+                            key={`${si}-line-${li}`}
+                            className="flex flex-wrap gap-x-2 "
                         >
-                            {line.split(" ").map((word, wi) => (
-                                <span key={`${si}-${liIndex}-${wi}`} className="flex">
-                                    {word.split("").map((letter, ci) => (
-                                        <motion.span
-                                            key={`${si}-${liIndex}-${wi}-${ci}`}
-                                            variants={letterVariant}
-                                            initial="initial"
-                                            animate={isInView ? "animate" : "initial"}
-                                            custom={si * 100 + liIndex * 50 + wi * 10 + ci}
-                                        >
-                                            {letter}
-                                        </motion.span>
-                                    ))}
+                            {words.map((word, wi) => (
+                                <span key={`${si}-${li}-${wi}`} className="flex">
+                                    {word.split("").map((letter, ci) => {
+                                        const index = si * 100 + li * 50 + wi * 10 + ci;
+                                        return (
+                                            <motion.span
+                                                key={index}
+                                                variants={letterVariant}
+                                                initial="hidden"
+                                                animate={isInView ? "visible" : "hidden"}
+                                                custom={index}
+                                                className={segment.color}
+                                            >
+                                                {letter}
+                                            </motion.span>
+                                        );
+                                    })}
                                     &nbsp;
                                 </span>
                             ))}
                         </span>
-                    ))
-            )}
+                    );
+                });
+            })}
         </Tag>
     );
 };
 
-export default AnimatedText;
+export default React.memo(AnimatedText);

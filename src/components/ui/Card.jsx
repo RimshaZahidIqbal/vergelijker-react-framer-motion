@@ -58,7 +58,7 @@ const Card = ({
   className = ""
 }) => {
   return (
-    <div className={`p-[.75rem] sm:p-6 lg:p-8 rounded-xl border m-2bg-[#D6EC5D]/11 border-[#212121]/20 relative flex flex-col gap-4 ${className}`}>
+    <div className={`p-[.75rem] sm:p-6 lg:p-8 rounded-xl border m-2bg-[#D6EC5D]/11 border-[#212121]/20 relative flex flex-col gap-y-2 gap-x-2 md:p-5 ${className}`}>
       {/* Top Section */}
       <div className="flex justify-between items-center">
         <div className="bg-[#FE65D9] p-2 sm:p-3 rounded-[.5rem] flex-shrink-0">
@@ -73,7 +73,7 @@ const Card = ({
       <AnimatedText
         text={heading}
         className="font-[Neighbor] text-gray-900 font-medium 
-          text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight"
+          text-xl sm:text-2xl md:text-3xl lg:text-3xl leading-tight"
       />
 
       {/* List */}

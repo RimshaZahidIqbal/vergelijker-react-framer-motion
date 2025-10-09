@@ -4,6 +4,7 @@ import { FaArrowRight, FaArrowLeft, FaCheckCircle } from "react-icons/fa";
 import { face, carCard, homeCard, heroBg, LinePattern } from "../../assets";
 import AnimatedButton from "../ui/AnimatedButton";
 import AnimatedText from "../ui/AnimatedText";
+import Spacer from "../ui/Spacer";
 
 const slides = [
     { id: 1, title: "Car Insurance", img: carCard, text: "Lorem Ipsum is that it has a more-or-less normal distribution." },
@@ -19,14 +20,14 @@ const HeroSection = () => {
     const handlePrev = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
     return (
-        <section className="relative w-full min-h-screen flex flex-col items-center text-white overflow-hidden rounded-b-[20px]">
+        <section className="relative w-full min-h-screen  max-h-auto flex flex-col items-center text-white overflow-hidden rounded-t-4xl rounded-b-3xl">
             {/* ------------------- TOP SECTION ------------------- */}
-            <div className="relative w-full bg-[#4050DC] rounded-t-none overflow-hidden">
+            <div className="relative w-full bg-[#1D4EDB] rounded-t-none overflow-hidden">
                 {/* BG Pattern */}
                 <img
                     src={LinePattern}
                     alt="pattern"
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    className="absolute inset-0 w-full h-full  object-fill pointer-events-none"
                 />
 
                 {/* CONTENT */}
@@ -82,21 +83,29 @@ const HeroSection = () => {
                         Vergelijker.nl compares insurance, energy, telecom & financial products with zero bias. Real reviews, transparent pricing, instant results.
                     </p>
                 </div>
+                <div className="md:hidden bg-no-repeat bg-cover bg-[#1D4EDB] "
+                    style={{
+                        backgroundImage: `url(${LinePattern})`,
+                        backgroundColor: "#1D4EDB",
+                    }}>
+                    <Spacer len='8'  >
+                    </Spacer>
+                </div>
             </div>
-
             {/* ------------------- MIDDLE SECTION (Floating Slider) ------------------- */}
             <div className="
-        relative
+        absolute
         z-20
         w-full
         flex
         justify-center
         px-4
+        top-[45%]
         md:px-6
         lg:px-0
         -mt-12
         md:-mt-16
-        lg:absolute
+        md:top-[45%]
         lg:top-[55%]
         lg:right-[2%]
         lg:transform
@@ -107,7 +116,7 @@ const HeroSection = () => {
                     {/* Counter + Arrows */}
                     <div className="flex justify-between w-full items-center text-white text-xs sm:text-sm md:text-base">
                         <span>
-                            {String(slides[current].id).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
+                            {String(slides[current].id).padStart(2, "0")}
                         </span>
                         <div className="flex items-center gap-2">
                             <button
@@ -154,7 +163,7 @@ const HeroSection = () => {
                             {[slides[current], slides[(current + 1) % slides.length]].map((card, index) => (
                                 <div
                                     key={card.id}
-                                    className={`bg-white border border-white/20 rounded-[14px] w-[270px] h-[250px] p-3 flex flex-col gap-3 backdrop-blur-sm ${index > 0 ? "opacity-90" : ""}`}
+                                    className={`bg-white border border-white/20 rounded-[14px] w-[326px] h-[302px] p-3 flex flex-col gap-3 backdrop-blur-sm ${index > 0 ? "opacity-90" : ""}`}
                                 >
                                     <h3 className="font-[Neighbor] text-[18px] font-semibold leading-[120%] text-black">
                                         {card.title}

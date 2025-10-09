@@ -7,46 +7,65 @@ const Slider = ({ items }) => {
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-            const scrollAmount = window.innerWidth < 768 ? 300 : 340;
+            const cardWidth = scrollRef.current.querySelector(".slider-card")?.offsetWidth || 350;
             scrollRef.current.scrollBy({
-                left: direction === "left" ? -scrollAmount : scrollAmount,
+                left: direction === "left" ? -cardWidth : cardWidth,
                 behavior: "smooth",
             });
         }
     };
 
-    const heights = [400, 550, 480]; // responsive heights
+    // Dynamically adjust image heights based on screen width
+    const getHeights = () => {
+        const width = window.innerWidth;
+
+        if (width < 640) {
+            // 📱 Mobile
+            return [300, 240, 260];
+        } else if (width < 1024) {
+            // 💻 Tablet
+            return [400, 320, 350];
+        } else {
+            // 🖥️ Desktop
+            return [586, 390, 484];
+        }
+    };
+
+    const heights = getHeights();
 
     return (
         <div className="relative w-full">
-            {/* Slider container */}
+            {/* Cards Container */}
             <div
                 ref={scrollRef}
-                className="flex gap-4 w-full pointer-events-none overflow-x-hidden"
+                className="flex items-center gap-6 overflow-x-auto scroll-smooth no-scrollbar px-4"
             >
                 {items.map((item, i) => (
                     <div
                         key={i}
-                        className="first:ml-4 last:mr-4 flex-shrink-0 pointer-events-auto"
+                        className="slider-card flex-shrink-0"
+                        style={{
+                            width: "clamp(250px, 30vw, 400px)", // responsive width
+                        }}
                     >
                         <SliderCard {...item} height={heights[i % heights.length]} />
                     </div>
                 ))}
             </div>
 
-            {/* Prev / Next buttons */}
-            <div className="flex gap-4 pt-6 justify-end">
+            {/* Navigation buttons */}
+            <div className="flex gap-4 pt-6 justify-end pr-6">
                 <button
                     onClick={() => scroll("left")}
-                    className="flex items-center justify-center gap-2 w-28 xs:w-32 px-4 py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white text-sm xs:text-base"
+                    className="flex items-center justify-center gap-2 w-28 px-4 py-2 border border-gray-300 rounded-full transition hover:bg-[#3B4EDB] hover:text-white"
                 >
-                    <FaArrowLeftLong size={14} className="xs:size-4" /> Prev
+                    <FaArrowLeftLong /> Prev
                 </button>
                 <button
                     onClick={() => scroll("right")}
-                    className="flex items-center justify-center gap-2 w-28 xs:w-32 px-4 py-2 border border-[#E5E5E5] rounded-full transition-colors duration-300 hover:bg-[#3B4EDB] hover:text-white text-sm xs:text-base"
+                    className="flex items-center justify-center gap-2 w-28 px-4 py-2 border border-gray-300 rounded-full transition hover:bg-[#3B4EDB] hover:text-white"
                 >
-                    Next <FaArrowRightLong size={14} className="xs:size-4" />
+                    Next <FaArrowRightLong />
                 </button>
             </div>
         </div>

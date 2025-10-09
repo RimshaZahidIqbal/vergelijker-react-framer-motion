@@ -56,13 +56,13 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
                     <div
                         key={i}
                         className={`${isWhite
-                            ? "bg-black/5 border border-black/10 text-black"
+                            ? "bg-white border border-[#0000001A] text-black"
                             : "bg-white/10 border border-white/20 text-white"
                             } backdrop-blur-xl rounded-2xl lg:rounded-3xl 
               w-full h-[280px] sm:h-[300px] lg:h-[340px] xl:h-[380px] 2xl:h-[420px]
               p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 
-              flex flex-col gap-3 md:gap-4 lg:gap-[18px] 
-              shadow-lg mx-auto mb-4`}
+              flex flex-col gap-3 md:gap-4 lg:gap-x-[18px] 
+               mx-auto mb-4`}
                     >
                         {/* Stars */}
                         <div className="flex gap-1 text-[#FAFE13]">
@@ -75,7 +75,7 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
 
                         {/* Heading */}
                         <h3
-                            className={`font-[Neighbor] text-base sm:text-[17px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold leading-[120%] ${isWhite ? "text-black" : "text-white"
+                            className={`font-[Neighbor] text-base sm:text-[17px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-medium leading-[1.5] ${isWhite ? "text-black" : "text-white"
                                 }`}
                         >
                             Great value home exercise
@@ -83,14 +83,14 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
 
                         {/* Paragraph */}
                         <p
-                            className={`font-[Geist] text-sm sm:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px] leading-[150%] overflow-hidden flex-1 ${isWhite ? "text-black/80" : "text-white/90"
+                            className={`!m-0 font-[Geist] text-sm sm:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px] leading-[1.5] overflow-hidden flex-1 ${isWhite ? "text-black/80" : "text-white/90"
                                 }`}
                         >
                             {item.text}
                         </p>
 
                         {/* Profile */}
-                        <div className="flex items-center gap-3 mt-2">
+                        <div className="flex items-center gap-3 mt-0">
                             <img
                                 src={item.img}
                                 alt={item.name}
@@ -104,7 +104,7 @@ const InfiniteScrollColumn = ({ testimonials, speed = 25, reverse = false, theme
                                     {item.name}
                                 </h4>
                                 <p
-                                    className={`font-[Geist] text-xs sm:text-[13px] leading-[120%] truncate ${isWhite ? "text-black/60" : "text-white/70"
+                                    className={`font-[Geist] text-xs sm:text-[13px] leading-[1.5] truncate ${isWhite ? "text-black/60" : "text-white/70"
                                         }`}
                                 >
                                     {item.role}
