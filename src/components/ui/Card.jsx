@@ -58,15 +58,7 @@ const Card = ({
   className = ""
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.03, rotate: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`p-4 sm:p-6 lg:p-8 rounded-xl border m-2 
-        bg-[#D6EC5D]/11 border-[#212121]/20 
-        relative flex flex-col gap-4 ${className}`}
-    >
+    <div className={`p-[.75rem] sm:p-6 lg:p-8 rounded-xl border m-2bg-[#D6EC5D]/11 border-[#212121]/20 relative flex flex-col gap-4 ${className}`}>
       {/* Top Section */}
       <div className="flex justify-between items-center">
         <div className="bg-[#FE65D9] p-2 sm:p-3 rounded-[.5rem] flex-shrink-0">
@@ -95,7 +87,7 @@ const Card = ({
           </li>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 };
 

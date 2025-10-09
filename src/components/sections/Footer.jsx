@@ -44,7 +44,7 @@ const Footer = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center w-full bg-[#0C0C0C] rounded-3xl mt-32">
+        <footer className="relative flex flex-col items-center w-full bg-[#0C0C0C] rounded-3xl mt-32">
 
             <div className="relative w-full flex justify-center z-20 -translate-y-1/2">
                 <FooterTopSection />
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="w-full bg-[#0C0C0C] rounded-3xl py-12 px-6 relative text-white/80 overflow-hidden">
                 <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-12 relative z-10">
 
-                    <div className="flex flex-between gap-5">
+                    <div className="flex justify-between gap-5">
 
                         {["Home", "Blogs", "Vergelijkingen", "Over ons"].map((text, i) => (
                             <RoundedButton
@@ -79,7 +79,7 @@ const Footer = () => {
 
                 <hr className="border-white/20 mb-8" />
 
-                <div className="block md:hidden mb-12 relative z-10">
+                <div className="block md:hidden mb-12 sticky z-12 bottom-0">
                     {Object.entries(sections).map(([title, items]) => (
                         <FooterAccordion key={title} title={title}>
                             <ul className="space-y-2 text-white/80">{items.map((i, j) => <li key={j}>{i}</li>)}</ul>
@@ -120,13 +120,13 @@ const Footer = () => {
                             <a href="#"><FaLinkedinIn /></a>
                         </div>
                         <p className="text-xs text-white/60">
-                            © Copyright 2025, Vergelijker Engels. All Rights Reserved
+                            © Copyright  {new Date().getFullYear()} , Vergelijker Engels. All Rights Reserved
                         </p>
                     </div>
                 </div>
             </div>
 
-        </div>
+        </footer>
     );
 };
 

@@ -2,8 +2,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const AnimatedText = ({ text, className = "" }) => {
-    const words = text.split(" ");
+const AnimatedText = ({
+    text,
+    as: Tag = "p",
+    className = "",
+    lineBreakChar = "\n", // split character for new lines
+}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, margin: "-50px" });
 
@@ -20,25 +24,44 @@ const AnimatedText = ({ text, className = "" }) => {
         }),
     };
 
+    // Normalize input
+    const segments =
+        typeof text === "string"
+            ? [{ value: text, color: "" }]
+            : Array.isArray(text)
+                ? text
+                : [];
+
     return (
-        <div ref={ref} className="flex flex-wrap gap-x-2 justify-center">
-            {words.map((word, wi) => (
-                <span key={wi} className="flex">
-                    {word.split("").map((letter, li) => (
-                        <motion.span
-                            key={li}
-                            variants={letterVariant}
-                            initial="initial"
-                            animate={isInView ? "animate" : "initial"}
-                            custom={wi * 10 + li}
-                            className={className}
+        <Tag ref={ref} className={`flex flex-col  ${className}`}>
+            {segments.map((segment, si) =>
+                segment.value
+                    .split(lineBreakChar)
+                    .map((line, liIndex) => (
+                        <span
+                            key={`${si}-line-${liIndex}`}
+                            className={`flex flex-wrap gap-x-2  ${segment.color}`}
                         >
-                            {letter}
-                        </motion.span>
-                    ))}
-                </span>
-            ))}
-        </div>
+                            {line.split(" ").map((word, wi) => (
+                                <span key={`${si}-${liIndex}-${wi}`} className="flex">
+                                    {word.split("").map((letter, ci) => (
+                                        <motion.span
+                                            key={`${si}-${liIndex}-${wi}-${ci}`}
+                                            variants={letterVariant}
+                                            initial="initial"
+                                            animate={isInView ? "animate" : "initial"}
+                                            custom={si * 100 + liIndex * 50 + wi * 10 + ci}
+                                        >
+                                            {letter}
+                                        </motion.span>
+                                    ))}
+                                    &nbsp;
+                                </span>
+                            ))}
+                        </span>
+                    ))
+            )}
+        </Tag>
     );
 };
 

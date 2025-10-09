@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-/* Neighbor local font */
+/* Local font */
 @font-face {
     font-family: "Neighbor";
     src: url("/fonts/Neighbor/fonnts.com-Neighbor_Regular.otf") format("opentype");
@@ -10,36 +10,37 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Neighbor";
-    src: url("/fonts/Neighbor/fonnts.com-Neighbor_Medium.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Neighbor";
-    src: url("/fonts/Neighbor/fonnts.com-Neighbor_Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-}
-
 body {
     font-family: 'Geist', sans-serif;
 }
 
-@keyframes scroll-left {
-    from {
-        transform: translateX(0);
+/* Typography using responsive Tailwind utilities */
+@layer base {
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1] font-medium tracking-tight text-balance;
     }
 
-    to {
-        transform: translateX(-25%);
+    h2 {
+        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1] font-medium tracking-tight text-balance;
     }
-}
 
+    h3 {
+        @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-[1] font-medium tracking-tight text-balance;
+    }
 
-.marquee-content {
-    animation: scroll-left 25s linear infinite;
-    width: max-content;
+    h4 {
+        @apply text-xl md:text-2xl lg:text-3xl leading-[1] font-medium tracking-normal text-balance;
+    }
+
+    h5 {
+        @apply text-lg md:text-xl lg:text-2xl leading-[1] font-medium tracking-normal text-balance;
+    }
+
+    h6 {
+        @apply text-base md:text-lg lg:text-xl leading-[1] font-medium tracking-normal text-balance;
+    }
+
+    p {
+        @apply text-base md:text-lg leading-tight mb-0;
+    }
 }

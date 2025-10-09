@@ -49,8 +49,8 @@ const ComparisonSection = () => {
                         key={f.id}
                         onClick={() => setActiveIndex(index)}
                         className={`rounded-full px-4 sm:px-5 lg:px-6 py-2 border text-xs sm:text-sm lg:text-base font-medium transition-colors duration-300 ${active.id === f.id
-                                ? "bg-[#3B4EDB] text-white"
-                                : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
+                            ? "bg-[#3B4EDB] text-white"
+                            : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
                             }`}
                     >
                         {f.label}

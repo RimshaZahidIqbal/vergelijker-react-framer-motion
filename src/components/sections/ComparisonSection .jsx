@@ -53,15 +53,12 @@ const ComparisonSection = () => {
                     {/* LEFT SIDE HEADING */}
                     <div className="flex flex-wrap leading-tight w-full lg:w-1/2 text-left">
                         <AnimatedText
-                            text="The comparison "
+                            text="The comparison site"
+
                             className="block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em]"
                         />
                         <AnimatedText
-                            text="site"
-                            className="block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] text-pink-400"
-                        />
-                        <AnimatedText
-                            text="that puts "
+                            text="that puts"
                             className="block font-[Neighbor] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] text-pink-400"
                         />
                         <AnimatedText
@@ -294,10 +291,24 @@ const ComparisonSection = () => {
                         </div>
 
                         {/* TEXT */}
-                        <AnimatedText
-                            text="Transparent Privacy Policy"
-                            className="font-[Neighbor] text-base sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left leading-snug"
-                        />
+                        <div className="flex flex-col">
+                            <AnimatedText
+                                text="Transparent"
+                                lineBreakChar="\n"
+                                className="font-[Neighbor] text-base sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left leading-snug"
+                            />
+                            <AnimatedText
+                                text="Privacy"
+                                lineBreakChar="\n"
+                                className="font-[Neighbor] text-base sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left leading-snug"
+                            />
+                            <AnimatedText
+                                text="Policy"
+                                lineBreakChar="\n"
+                                className="font-[Neighbor] text-base sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left leading-snug"
+                            />
+
+                        </div>
                     </div>
 
                 </div>

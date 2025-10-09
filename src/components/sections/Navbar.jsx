@@ -23,7 +23,7 @@ const Navbar = () => {
     // ✅ NavLink Component (uses react-router Link)
     const NavLink = ({ children, to }) => (
         <motion.div
-            className="relative font-medium text-black flex flex-col items-start"
+            className="relative font-medium text-[#212121] flex flex-col items-start"
             initial="hidden"
             whileHover="visible"
         >
@@ -49,7 +49,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="w-full bg-white sticky top-0 left-0 z-50">
+        <nav className="w-full bg-white gap-x-6 gap-y-6 top-0 left-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 {/* Logo */}
                 <motion.img
@@ -95,7 +95,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className="md:hidden bg-white shadow-md px-6 py-6 space-y-4"
+                    className="md:hidden bg-white text-[#212121] shadow-md px-6 py-6 text-[1.125rem] font-normal leading-6 tracking-[0em] space-y-6"
                 >
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="#">Over ons</NavLink>
