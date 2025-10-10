@@ -58,7 +58,7 @@ const Card = ({
   className = ""
 }) => {
   return (
-    <div className={`p-[.75rem] sm:p-6 lg:p-8 rounded-xl border m-2bg-[#D6EC5D]/11 border-[#212121]/20 relative flex flex-col gap-y-2 gap-x-2 md:p-5 ${className}`}>
+    <div className={`p-[.75rem] sm:p-6 bg-[#D6EC5D1C] lg:p-8 rounded-xl border m-2bg-[#D6EC5D]/11 border-[#212121]/20 relative flex flex-col gap-y-2 gap-x-2 md:p-5 ${className}`}>
       {/* Top Section */}
       <div className="flex justify-between items-center">
         <div className="bg-[#FE65D9] p-2 sm:p-3 rounded-[.5rem] flex-shrink-0">
