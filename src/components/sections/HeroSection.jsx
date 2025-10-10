@@ -35,22 +35,22 @@ const HeroSection = () => {
                     {/* Heading + Buttons */}
                     <div className="flex flex-col gap-5 md:gap-8 lg:gap-[43px] w-full lg:w-[60%] xl:w-[923px]">
                         <div className="flex flex-col items-start gap-4 md:gap-6">
-                            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center leading-tight">
+                            <h1 className="flex flex-col sm:flex-row sm:flex-wrap items-start  sm:items-center leading-tight">
                                 <AnimatedText
                                     text="Find your "
-                                    className="font-[Neighbor] font-semibold text-2xl xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em]"
+                                    className="font-[Neighbor] font-semibold text-h1  tracking-tight"
                                 />
                                 <AnimatedText
                                     text="perfect match "
-                                    className="font-[Neighbor] font-semibold text-2xl xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em] text-[#FAFE13]"
+                                    className="font-[Neighbor] font-semibold text-h1 tracking-tight text-[#FAFE13]"
                                 />
                                 <AnimatedText
                                     text="in seconds - 100% "
-                                    className="font-[Neighbor] font-semibold text-2xl xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em]"
+                                    className="font-[Neighbor] font-semibold text-h1 xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em]"
                                 />
                                 <AnimatedText
                                     text="independent, "
-                                    className="font-[Neighbor] font-semibold text-2xl xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em] text-[#FAFE13]"
+                                    className="font-[Neighbor] font-semibold text-h1 xs:text-3xl sm:text-4xl lg:text-6xl tracking-[-0.02em] text-[#FAFE13]"
                                 />
                                 {/* Last part + image together inline */}
                                 <div className="flex items-center flex-wrap">
@@ -68,7 +68,7 @@ const HeroSection = () => {
                                         }}
                                     />
                                 </div>
-                            </div>
+                            </h1>
 
                             {/* Buttons */}
                             <div className="flex flex-row xs:flex-row gap-3 xs:gap-4 ">
