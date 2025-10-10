@@ -11,7 +11,7 @@ const FooterTopSection = () => {
     return (
         <motion.div
             className="
-                w-[95%] sm:w-11/12 md:w-10/12 lg:w-9/12 
+                w-[270px] sm:w-[367px] md:w-[677px] lg:w-[892px] xl:w-[1290px] 
                 bg-[#FCFF5C] rounded-3xl shadow-xl 
                 flex flex-col justify-between items-center
                 pt-8 md:pt-12 pb-0 text-center mx-auto relative overflow-hidden
@@ -56,10 +56,10 @@ const FooterTopSection = () => {
                 />
 
                 {/* Animated text */}
-                <div className="w-[75%] md:w-[70%] lg:w-[80%]">
+                <div className="w-[75%] md:w-[70%] lg:w-[80%] flex justify-center items-center">
                     <AnimatedText
                         className="mt-3 font-[Neighbor] text-[#0C0C0C] 
-                        text-lg sm:text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight"
+                        text-lg sm:text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight "
                         text="Ready to confidently find your perfect match?"
                     />
                 </div>

@@ -28,7 +28,6 @@ const Homepage = () => {
             <Slider items={sliderData} />
             <BrandSection />
             <br />
-            <Footer />
         </div>
     )
 }

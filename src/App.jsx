@@ -6,7 +6,8 @@ import Navbar from './components/sections/Navbar';
 import Homepage from './pages/Homepage';
 import BlogListingpage from './pages/BlogListingpage';
 import BlogDetailpage from './pages/BlogDetailpage';
-
+import FooterTopSection from './components/sections/FooterTopSection';
+import Footer from './components/sections/Footer';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
             <Route path="/blogdetail" element={<BlogDetailpage />} />
           </Routes>
         </AnimatePresence>
+        <FooterTopSection />
+        <div className="pt-0 p-1 md:p-1 lg:p-3 xl:p-2 xl:pt-0 2xl:p-6  2xl:pt-0 overflow-x-hidden">
+          <Footer />
+        </div>
       </div>
     </Router>
   );

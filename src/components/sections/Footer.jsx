@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FooterTopSection from "./FooterTopSection";
 import RoundedButton from "../ui/RoundedButton";
 import { ArrowRight } from "lucide-react";
@@ -6,6 +6,8 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 import { VectorImage } from "../../assets";
 import FooterAccordion from "../ui/FooterAccordion";
 import FooterSection from "../ui/FooterSection";
+import Spacer from "../ui/Spacer";
+
 const Footer = () => {
     const sections = {
         Compare: [
@@ -44,89 +46,99 @@ const Footer = () => {
     };
 
     return (
-        <footer className="relative flex flex-col items-center w-full bg-[#0C0C0C] rounded-3xl mt-32">
+        <div className="relative flex flex-col items-center w-full ">
 
-            <div className="relative w-full flex justify-center z-20 -translate-y-1/2">
-                <FooterTopSection />
-            </div>
-
-
-            {/* Main Footer */}
-            <div className="w-full bg-[#0C0C0C] rounded-3xl py-12 px-6 relative text-white/80 overflow-hidden">
-                <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-12 relative z-10">
-
-                    <div className="flex justify-between gap-5">
-
+            <footer className="relative w-full p-2 bg-[#0C0C0C] rounded-t-3xl text-white/80 m-3 mx-4 md:p-12 xl:p-24 overflow-hidden z-20">
+                {/* Buttons Row */}
+                <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mb-12">
+                    <div className="flex  justify-center md:justify-between gap-5 flex-wrap font-normal leading-[1.5] ">
                         {["Home", "Blogs", "Vergelijkingen", "Over ons"].map((text, i) => (
                             <RoundedButton
                                 key={i}
                                 text={text}
-                                className="min-w-[140px] md:min-w-[160px] text-xs sm:text-sm md:text-lg border border-white/80 text-white/80 hover:border-white/70"
+                                className="min-w-[140px] md:min-w-[160px] py-3 text-xs sm:text-sm md:text-lg border border-white/80 text-white/80 hover:border-white/70"
                             />
                         ))}
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+
+                    {/* Email Subscribe */}
+                    <div className="flex flex-row items-end gap-2 w-full md:w-auto">
                         <input
                             type="email"
                             placeholder="Your email address"
                             className="bg-transparent border-b border-white/40 px-3 py-2 flex-1 min-w-[200px] focus:outline-none focus:border-white/80"
                         />
-                        <button className="hover:bg-white/5 px-4 py-2 flex items-center justify-center transition">
-                            <ArrowRight className="w-5 h-5 -rotate-45  hover:rotate-0 transition-transform" />
+                        <button className="hover:bg-white/5 px-4 py-2 flex items-center justify-center transition ">
+                            <ArrowRight className="w-5 h-5 -rotate-45 hover:rotate-0 transition-transform" />
                         </button>
                     </div>
                 </div>
 
-                <hr className="border-white/20 mb-8" />
+                <hr className="md:border-white/20 mb-8 hidden " />
 
-                <div className="block md:hidden mb-12 sticky z-12 bottom-0">
+                {/* Mobile Accordion */}
+                <div className="block md:hidden mb-12">
                     {Object.entries(sections).map(([title, items]) => (
                         <FooterAccordion key={title} title={title}>
-                            <ul className="space-y-2 text-white/80">{items.map((i, j) => <li key={j}>{i}</li>)}</ul>
+                            <ul className="space-y-2 text-white/80 font-medium ">
+                                {items.map((i, j) => (
+                                    <li key={j}>{i}</li>
+                                ))}
+                            </ul>
                         </FooterAccordion>
                     ))}
                     <FooterAccordion title="Contact Information">
-                        <div className="space-y-2 text-white/80">
-                            <p><span className="font-semibold">Address:</span> Amsterdam, Netherlands</p>
-                            <p><span className="font-semibold">Phone:</span> 020-123-4567</p>
-                            <p><span className="font-semibold">Mail:</span> help@vergelijker.nl</p>
+                        <div className="space-y-2 text-white/80 font-medium">
+                            <p>
+                                <span className="font-semibold">Address:</span> Amsterdam, Netherlands
+                            </p>
+                            <p>
+                                <span className="font-semibold">Phone:</span> 020-123-4567
+                            </p>
+                            <p>
+                                <span className="font-semibold">Mail:</span> help@vergelijker.nl
+                            </p>
                         </div>
                     </FooterAccordion>
                 </div>
 
-                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-sm mb-12 relative z-10">
+                {/* Desktop Footer Grid */}
+                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-sm mb-12">
                     {Object.entries(sections).map(([title, items]) => (
                         <FooterSection key={title} title={title} items={items} />
                     ))}
                     <div>
-                        <h3 className="font-semibold mb-3">Contact Information</h3>
-                        <p className="text-white/80"><span className="font-semibold">Address:</span> Amsterdam, Netherlands</p>
-                        <p className="text-white/80"><span className="font-semibold">Phone:</span> 020-123-4567</p>
-                        <p className="text-white/80"><span className="font-semibold">Mail:</span> help@vergelijker.nl</p>
-                    </div>
-                </div>
-                {/* Sticky Bottom Section */}
-                <div className="relative z-10 pt-6">
-                    <img
-                        src={VectorImage}
-                        alt="vector"
-                        className="w-full h-auto mb-6"
-                    />
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div className="flex gap-4 text-white/70">
-                            <a href="#"><FaFacebookF /></a>
-                            <a href="#"><FaTwitter /></a>
-                            <a href="#"><FaInstagram /></a>
-                            <a href="#"><FaLinkedinIn /></a>
-                        </div>
-                        <p className="text-xs text-white/60">
-                            © Copyright  {new Date().getFullYear()} , Vergelijker Engels. All Rights Reserved
+                        <h3 className="!font-semibold text-xl leading-14 text-white mb-3 space-y-2">Contact Information</h3>
+                        <p className="text-white/80 pb-2">
+                            <span className="font-semibold">Address:</span> Amsterdam, Netherlands
+                        </p>
+                        <p className="text-white/80 pb-2">
+                            <span className="font-semibold">Phone:</span> 020-123-4567
+                        </p>
+                        <p className="text-white/80 pb-2">
+                            <span className="font-semibold">Mail:</span> help@vergelijker.nl
                         </p>
                     </div>
                 </div>
-            </div>
 
-        </footer>
+                {/* Bottom Bar */}
+                <div className="pt-6">
+                    <img src={VectorImage} alt="vector" className="w-full h-auto mb-6" />
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div className="flex gap-6 justify-center items-center">
+                            {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
+                                <a key={i} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0C0C0C] text-white ring-1 ring-white hover:scale-110 transition"><Icon /></a>
+                            ))}
+                        </div>
+
+
+                        <p className="text-xs text-white/60 md:text-lg">
+                            © Copyright {new Date().getFullYear()}, Vergelijker Engels. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
     );
 };
 
