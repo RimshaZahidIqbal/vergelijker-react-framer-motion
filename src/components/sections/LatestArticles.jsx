@@ -53,38 +53,39 @@ export default function LatestArticles() {
                 </p>
 
                 {/* Articles Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {articles.map((article, i) => (
                         <motion.div
                             key={article.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.2, duration: 0.6 }}
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition-all duration-300"
+                            className="bg-white overflow-hidden transition-all duration-300 group rounded-2xl"
                         >
-                            <img
-                                src={article.image}
-                                alt={article.title}
-                                className="w-full h-64 object-cover"
-                            />
-                            <div className="p-6 text-left">
+                            <div className="overflow-hidden rounded-2xl">
+                                <img
+                                    src={article.image}
+                                    alt={article.title}
+                                    className="w-full h-auto md:h-[414px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                />
+                            </div>
+
+                            <div className="pt-2 md:p-6 text-left text-[#212121]">
                                 {/* Date + Arrow in one row */}
                                 <div className="flex items-center justify-between mb-2">
-                                    <p className="text-sm text-gray-400">
+                                    <p className="text-[.8125rem]">
                                         Article · {article.date}
                                     </p>
-                                    <MdArrowOutward className="text-gray-500 text-lg hover:translate-x-1 transition-transform" />
+                                    <MdArrowOutward className="md:w-6 md:h-[26px] text-[#212121] text-lg" />
                                 </div>
 
-                                <h3 className="font-semibold text-lg mb-2 leading-tight">
+                                <h5 className="font-[Neighbor] font-medium text-3xl mb-2 leading-[1.1] md:leading-tight">
                                     {article.title}
-                                </h3>
-                                <p className="text-gray-600 text-sm mb-4">
+                                </h5>
+                                <p className="text-base mb-4">
                                     {article.description}
                                 </p>
                             </div>
                         </motion.div>
+
+
                     ))}
                 </div>
             </div>

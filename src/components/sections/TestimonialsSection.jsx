@@ -183,12 +183,12 @@ const TestimonialsSection = ({ theme = "blue" }) => {
             </div>
 
             {/* Bottom Button */}
-            <div className="relative flex justify-center items-center z-10 mt-4 md:mt-6 lg:mt-0">
+            {/* <div className="relative flex justify-center items-center z-10 mt-4 md:mt-6 lg:mt-0">
                 <AnimatedButton
                     text={"See All Testimonials"}
-                    className={isWhite ? "text-white border-black hover:bg-black/5" : ""}
+                    className={isWhite ? "text-white" : ""}
                 />
-            </div>
+            </div> */}
         </div>
     );
 };

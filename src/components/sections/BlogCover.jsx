@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaSearch } from "react-icons/fa";
 import { face, LinePattern, blogCoverBg } from "../../assets";
 import AnimatedButton from "../ui/AnimatedButton";
 import AnimatedText from "../ui/AnimatedText";
@@ -62,14 +62,21 @@ const BlogCover = () => {
                             you make smart choices. Stay updated on the latest trends and
                             developments in the world of comparisons.
                         </p>
-                        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row items-start sm:items-start md:items-start lg:items-center gap-3 sm:gap-3 md:gap-3 lg:gap-4">
-                            <AnimatedButton text={"Read More"} />
-                            <input
-                                type="text"
-                                placeholder="Search product"
-                                className="px-3 py-2 w-full sm:w-full md:w-full lg:w-auto rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FAFE13]"
-                            />
+                        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-start lg:items-center gap-3 lg:gap-4">
+                            <AnimatedButton text="Read More" className="w-full lg:w-auto" />
+
+                            <div className="flex w-full lg:w-auto items-center border border-gray-300 rounded-md overflow-hidden bg-white">
+                                <input
+                                    type="text"
+                                    placeholder="Search product..."
+                                    className="flex-1 px-4 py-2 focus:outline-none text-[#212121]"
+                                />
+                                <button className=" px-4 py-2 text-[#636363]">
+                                    <FaSearch />
+                                </button>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>

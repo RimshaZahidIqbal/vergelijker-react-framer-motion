@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { FaRegClock } from "react-icons/fa";
 import { LinePattern, blogCoverBg, face } from "../../assets";
 import AnimatedText from "../ui/AnimatedText";
-import AnimatedButton from "../ui/AnimatedButton";
-import { FaCalendarDays } from "react-icons/fa6";
+import { FaCalendarDays, FaChevronRight } from "react-icons/fa6";
+import { } from "react-icons/bi";
+import AnimatedCenterBtn from "../ui/AnimatedCenterBtn";
 
 const DetailCover = () => {
     return (
@@ -19,16 +20,13 @@ const DetailCover = () => {
             <div className="relative w-full bg-[#4050DC] rounded-[20px] overflow-hidden z-10">
                 <div className="flex flex-col items-center text-center px-4 sm:px-6 pt-12 sm:pt-16 pb-24 md:pb-32 lg:pb-44 max-w-[1100px] mx-auto">
                     {/* button */}
-                    <button className="min-w-[104px] px-4 py-2 h-[41px] rounded-[12px] border-[1.5px] border-[#fe65d8fa] bg-[#FE65D9] text-white font-medium text-sm 
-        flex items-center justify-center gap-2 transition-all duration-300 
-        hover:bg-[#3B4EDB] hover:text-white mb-4 sm:mb-6"
-                    > Blog . Kennis </button>
+                    <AnimatedCenterBtn leftText="Blog" rightText="Kennis" className="text-lg" />
 
                     {/* Headline */}
                     <div className="flex flex-col gap-1 sm:gap-2 mb-4 sm:mb-6">
                         <AnimatedText
                             text="De voordelen van"
-                            className="font-[Neighbor] font-semibold text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] leading-tight"
+                            className="font-[Neighbor] font-semibold text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] items-center leading-tight"
                         />
                         <AnimatedText
                             text=" onafhankelijk vergelijken"
